@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import CategoryNav from '../components/CategoryNav.astro';
 
 const allArticles = await getCollection('news');
 const sorted = allArticles.sort((a, b) => {
@@ -19,19 +20,6 @@ for (const a of allArticles) {
   const cat = a.data.category;
   categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
 }
-
-const categories = [
-  { key: 'Politics', icon: '🏛', color: 'indigo' },
-  { key: 'Economy', icon: '📈', color: 'amber' },
-  { key: 'Tech', icon: '⚡', color: 'emerald' },
-  { key: 'Sports', icon: '🏆', color: 'sky' },
-  { key: 'Showbiz', icon: '🎬', color: 'pink' },
-];
-
-// Find the most recent article's pubDate for "last updated"
-const newestDate = allArticles.length > 0
-  ? allArticles.reduce((latest, a) => a.data.pubDate > latest ? a.data.pubDate : latest, allArticles[0].data.pubDate)
-  : new Date();
 ---
 
 <BaseLayout title="Home" description="pulse360 — the world's simplest global news snapshot, refreshed every 4 hours.">
@@ -62,21 +50,7 @@ const newestDate = allArticles.length > 0
     </div>
 
     <!-- Category nav chips -->
-    <div class="flex flex-wrap gap-2">
-      {categories.map(cat => {
-        const count = categoryCounts[cat.key] || 0;
-        return (
-          <a
-            href={`${import.meta.env.BASE_URL}${cat.key.toLowerCase()}`}
-            class={`category-chip group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent-soft)] transition-all duration-200`}
-          >
-            <span class="text-sm">{cat.icon}</span>
-            <span>{cat.key}</span>
-            <span class="tabular-nums opacity-50 text-[10px]">{count}</span>
-          </a>
-        );
-      })}
-    </div>
+    <CategoryNav active={null} counts={categoryCounts} total={allArticles.length} />
   </section>
 
   <!-- Divider -->

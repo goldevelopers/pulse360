@@ -1,0 +1,58 @@
+---
+interface Props {
+  /** Currently active category key (e.g. "Tech"), or null for the "All" / homepage view */
+  active?: string | null;
+  /** Map of category key → article count */
+  counts?: Record<string, number>;
+  /** Total article count across all categories */
+  total?: number;
+}
+
+const { active = null, counts = {}, total = 0 } = Astro.props;
+
+const categories = [
+  { key: 'Politics', icon: '🏛' },
+  { key: 'Economy', icon: '📈' },
+  { key: 'Tech', icon: '⚡' },
+  { key: 'Sports', icon: '🏆' },
+  { key: 'Showbiz', icon: '🎬' },
+];
+---
+
+<nav class="flex flex-wrap items-center gap-2" aria-label="Category filters">
+  <!-- All / Home chip -->
+  <a
+    href={import.meta.env.BASE_URL}
+    class:list={[
+      'category-chip inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200',
+      active === null
+        ? 'border-[var(--color-accent)] bg-[var(--color-accent-soft)] text-[var(--color-ink)]'
+        : 'border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent-soft)]',
+    ]}
+  >
+    <span class="text-sm">🌍</span>
+    <span>All</span>
+    {total > 0 && <span class="tabular-nums opacity-50 text-[10px]">{total}</span>}
+  </a>
+
+  {categories.map(cat => {
+    const count = counts[cat.key] || 0;
+    const isActive = active === cat.key;
+    return (
+      <a
+        href={`${import.meta.env.BASE_URL}${cat.key.toLowerCase()}`}
+        class:list={[
+          'category-chip inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200',
+          isActive
+            ? 'border-[var(--color-accent)] bg-[var(--color-accent-soft)] text-[var(--color-ink)]'
+            : 'border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent-soft)]',
+        ]}
+        aria-current={isActive ? 'page' : undefined}
+      >
+        <span class="text-sm">{cat.icon}</span>
+        <span>{cat.key}</span>
+        {count > 0 && <span class="tabular-nums opacity-50 text-[10px]">{count}</span>}
+      </a>
+    );
+  })}
+</nav>

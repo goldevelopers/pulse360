@@ -1,7 +1,7 @@
 ---
 category: Showbiz
 description: Inside this week's biggest Hollywood premieres, parties and openings.
-displayOrder: 49
+displayOrder: 999
 heroImage: ''
 importance: 38.8
 pubDate: '2026-03-20T19:16:30Z'

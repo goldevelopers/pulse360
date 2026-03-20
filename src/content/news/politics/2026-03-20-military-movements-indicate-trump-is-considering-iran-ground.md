@@ -2,7 +2,7 @@
 category: Politics
 description: The US is moving military assets to the Middle East that are key to providing
   support for ground troop operations.
-displayOrder: 9
+displayOrder: 12
 heroImage: ''
 importance: 56.5
 pubDate: '2026-03-20T21:05:32Z'

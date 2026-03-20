@@ -2,7 +2,7 @@
 category: Showbiz
 description: Bendis and co-creator Michael Avon Oeming are participating in the show's
   development.
-displayOrder: 42
+displayOrder: 999
 heroImage: ''
 importance: 41.8
 pubDate: '2026-03-20T21:21:06Z'

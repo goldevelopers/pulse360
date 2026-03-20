@@ -3,7 +3,7 @@ category: Showbiz
 description: Norris, who died at 86 on Friday, inspired one of the most famous meme
   trends of a generation with "Chuck Norris Facts," which played on the actor's ultra-manly
   persona.
-displayOrder: 23
+displayOrder: 38
 heroImage: ''
 importance: 47.8
 pubDate: '2026-03-20T21:35:17Z'

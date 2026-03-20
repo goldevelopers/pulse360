@@ -2,7 +2,7 @@
 category: Politics
 description: Both AMD- and Intel-based hardware is getting better support in SteamOS
   3.8.
-displayOrder: 33
+displayOrder: 999
 heroImage: ''
 importance: 46.0
 pubDate: '2026-03-20T15:36:57Z'

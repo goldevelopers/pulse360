@@ -3,7 +3,7 @@ category: Politics
 description: 'As the Giannis trade watch enters another offseason, a rare ownership
   structure and financial turmoil have left opposing teams wondering: Who''s in charge
   here?'
-displayOrder: 27
+displayOrder: 45
 heroImage: ''
 importance: 46.5
 pubDate: '2026-03-20T14:56:56Z'

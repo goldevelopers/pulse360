@@ -2,7 +2,7 @@
 category: Politics
 description: Bose might be known for its noise-canceling headphones, but the brand’s
   soundbars are pretty solid too.
-displayOrder: 39
+displayOrder: 999
 heroImage: ''
 importance: 44.2
 pubDate: '2026-03-20T17:45:31Z'

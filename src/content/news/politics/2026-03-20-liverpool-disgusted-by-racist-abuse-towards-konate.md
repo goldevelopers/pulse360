@@ -2,7 +2,7 @@
 category: Politics
 description: Liverpool say they are "appalled and disgusted" by racist abuse directed
   towards defender Ibrahima Konate on social media.
-displayOrder: 37
+displayOrder: 999
 heroImage: ''
 importance: 44.2
 pubDate: '2026-03-20T14:06:06Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: The Amazon magnate has a new project centered around acquiring industrial
   firms and revamping them with AI technology.
-displayOrder: 32
+displayOrder: 999
 heroImage: ''
 importance: 46.0
 pubDate: '2026-03-19T22:09:24Z'

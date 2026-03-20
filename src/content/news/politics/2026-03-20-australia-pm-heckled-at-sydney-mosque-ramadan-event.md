@@ -2,7 +2,7 @@
 category: Politics
 description: The government's response to the Israel-Gaza war and rising Islamophobia
   has angered many Muslim Australians.
-displayOrder: 26
+displayOrder: 43
 heroImage: ''
 importance: 47.2
 pubDate: '2026-03-20T02:54:21Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: '"Project Sunrise" would include more than 50,000 satellites performing
   high-energy compute on orbit.'
-displayOrder: 31
+displayOrder: 999
 heroImage: ''
 importance: 46.0
 pubDate: '2026-03-20T16:27:43Z'

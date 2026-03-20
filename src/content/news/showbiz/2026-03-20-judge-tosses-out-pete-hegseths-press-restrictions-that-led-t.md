@@ -3,7 +3,7 @@ category: Showbiz
 description: The Pentagon&#8217;s new restrictions on press access violate the First
   and Fifth Amendment, a federal judge ruled on Friday, delivering a victory to media
   outlets that left the…
-displayOrder: 46
+displayOrder: 999
 heroImage: ''
 importance: 40.0
 pubDate: '2026-03-20T21:16:44Z'

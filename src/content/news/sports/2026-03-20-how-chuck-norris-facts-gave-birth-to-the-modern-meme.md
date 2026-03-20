@@ -2,7 +2,7 @@
 category: Sports
 description: Chuck Norris was a karate legend, then an action star, and then ... memes.
   So many memes.
-displayOrder: 47
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-20T22:38:07Z'

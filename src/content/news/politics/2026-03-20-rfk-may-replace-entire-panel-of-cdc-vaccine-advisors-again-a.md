@@ -1,7 +1,7 @@
 ---
 category: Politics
 description: Robert Malone made the claim, then retracted it, as HHS denied it.
-displayOrder: 17
+displayOrder: 32
 heroImage: ''
 importance: 50.0
 pubDate: '2026-03-20T17:36:09Z'

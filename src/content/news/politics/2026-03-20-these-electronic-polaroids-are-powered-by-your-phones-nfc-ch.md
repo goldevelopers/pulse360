@@ -3,7 +3,7 @@ category: Politics
 description: E Ink displays have expanded beyond e-readers. They're now used in digital
   photo frames, smartphones, and even the price tags found on grocery store shelves.
   VidaBay's Classic…
-displayOrder: 38
+displayOrder: 999
 heroImage: ''
 importance: 44.2
 pubDate: '2026-03-20T18:05:07Z'

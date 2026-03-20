@@ -2,7 +2,7 @@
 category: Showbiz
 description: '''The Secret Reading Club of Kabul'' and ''The Phantom Pain of Rojava''
   are also among the honorees of the 23rd edition of the Copenhagen documentary festival.'
-displayOrder: 48
+displayOrder: 999
 heroImage: ''
 importance: 38.8
 pubDate: '2026-03-20T21:00:00Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: A judge ordered Kalshi to immediately halt sports and election contracts
   in the state, intensifying a growing regulatory battle over prediction markets.
-displayOrder: 40
+displayOrder: 999
 heroImage: ''
 importance: 44.2
 pubDate: '2026-03-20T16:54:15Z'

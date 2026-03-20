@@ -3,7 +3,7 @@ category: Showbiz
 description: As he heads to a galaxy far, far away for his Star Wars franchise debut,
   Ryan Gosling has his sights set on the MCU next. The 3x Oscar nominee recently teased
   that he&#8217;s had…
-displayOrder: 34
+displayOrder: 999
 heroImage: ''
 importance: 46.0
 pubDate: '2026-03-20T21:09:10Z'

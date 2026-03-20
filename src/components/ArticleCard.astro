@@ -46,7 +46,7 @@ const catLower = category.toLowerCase();
 ---
 
 <article
-  class="card-animate group relative bg-[var(--color-surface)] rounded-2xl overflow-hidden border border-[var(--color-border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]"
+  class="card-animate group relative flex flex-col bg-[var(--color-surface)] rounded-2xl overflow-hidden border border-[var(--color-border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]"
   style="box-shadow: var(--shadow-card);"
   data-category={catLower}
 >
@@ -63,7 +63,7 @@ const catLower = category.toLowerCase();
     <div class="h-1 bg-[var(--color-accent)]"></div>
   )}
 
-  <div class="p-6 flex flex-col gap-3">
+  <div class="p-6 flex flex-col gap-3 flex-1">
     <!-- Category + time -->
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2">

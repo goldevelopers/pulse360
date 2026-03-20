@@ -9,7 +9,7 @@ const news = defineCollection({
     description: z.string().max(200),
     country: z.string().optional().default(''),
     countryCode: z.string().optional().default(''),
-    category: z.enum(['Politics', 'Economy', 'Sports', 'Showbiz']),
+    category: z.enum(['Politics', 'Economy', 'Sports', 'Showbiz', 'Tech']),
     sourceUrl: z.string().url(),
     heroImage: z.string().optional(),
     sentiment: z.enum(['Positive', 'Negative', 'Neutral']).default('Neutral'),

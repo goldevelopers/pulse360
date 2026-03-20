@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 
 export async function getStaticPaths() {
-  const categories = ['politics', 'economy', 'sports', 'showbiz'];
+  const categories = ['politics', 'economy', 'sports', 'showbiz', 'tech'];
   return categories.map(cat => ({ params: { category: cat } }));
 }
 

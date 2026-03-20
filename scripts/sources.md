@@ -17,8 +17,12 @@
 | Variety            | rss     | https://variety.com/feed/                                    | global           | Showbiz                  | yes    |
 | Hollywood Reporter | rss     | https://www.hollywoodreporter.com/feed/                      | global           | Showbiz                  | yes    |
 | Deadline           | rss     | https://deadline.com/feed/                                   | global           | Showbiz                  | yes    |
-| NewsAPI Top        | newsapi | https://newsapi.org/v2/top-headlines                         | configurable     | Politics,Economy,Sports  | yes    |
-| GNews              | gnews   | https://gnews.io/api/v4/top-headlines                        | configurable     | Politics,Economy,Sports  | yes    |
+| TechCrunch         | rss     | https://techcrunch.com/feed/                                 | global           | Tech                     | yes    |
+| Ars Technica       | rss     | https://feeds.arstechnica.com/arstechnica/index              | global           | Tech                     | yes    |
+| The Verge          | rss     | https://www.theverge.com/rss/index.xml                       | global           | Tech                     | yes    |
+| Wired              | rss     | https://www.wired.com/feed/rss                               | global           | Tech                     | yes    |
+| NewsAPI Top        | newsapi | https://newsapi.org/v2/top-headlines                         | configurable     | Politics,Economy,Sports,Tech | yes    |
+| GNews              | gnews   | https://gnews.io/api/v4/top-headlines                        | configurable     | Politics,Economy,Sports,Tech | yes    |
 
 ## Adding a new source
 

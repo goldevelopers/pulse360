@@ -61,8 +61,8 @@ MAX_PER_SOURCE = int(os.environ.get("MAX_PER_SOURCE", "8"))
 LLM_MODEL = "gpt-4o-mini"
 LLM_WORD_TARGET = "400-600"
 
-NEWSAPI_CATEGORIES = ["general", "business", "sports", "entertainment"]
-GNEWS_CATEGORIES = ["general", "business", "sports", "entertainment"]
+NEWSAPI_CATEGORIES = ["general", "business", "sports", "entertainment", "technology", "science"]
+GNEWS_CATEGORIES = ["general", "business", "sports", "entertainment", "technology", "science"]
 
 CATEGORY_MAP: dict[str, str] = {
     "general": "Politics",
@@ -73,6 +73,18 @@ CATEGORY_MAP: dict[str, str] = {
     "sport": "Sports",
     "entertainment": "Showbiz",
     "showbiz": "Showbiz",
+    "technology": "Tech",
+    "tech": "Tech",
+    "science": "Tech",
+}
+
+# Category distribution quotas (must sum to 1.0)
+CATEGORY_QUOTAS: dict[str, float] = {
+    "Politics": 0.35,
+    "Economy": 0.35,
+    "Tech": 0.10,
+    "Sports": 0.10,
+    "Showbiz": 0.10,
 }
 
 logging.basicConfig(
@@ -123,7 +135,12 @@ SOURCE_TIER: dict[str, int] = {
     "Sky News":          80,
     "BBC Sport":         75,
     "ESPN":              70,
-    # Tier 3 — Specialist / entertainment press
+    # Tier 3 — Tech press
+    "TechCrunch":        80,
+    "Ars Technica":      80,
+    "The Verge":         75,
+    "Wired":             75,
+    # Tier 4 — Specialist / entertainment press
     "Variety":           65,
     "Hollywood Reporter":65,
     "Deadline":          60,
@@ -861,6 +878,75 @@ def git_commit_all(new_files: list[Path]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Category-quota selection
+# ---------------------------------------------------------------------------
+
+def select_with_quotas(
+    candidates: list[tuple[RawArticle, str]],
+    total: int,
+) -> list[tuple[RawArticle, str]]:
+    """Select *total* articles respecting CATEGORY_QUOTAS distribution.
+    Candidates must already be sorted by importance (highest first).
+    Unfilled quota slots are redistributed to other categories."""
+    import math
+    from collections import defaultdict
+
+    # Bucket candidates by category
+    by_cat: dict[str, list[tuple[RawArticle, str]]] = defaultdict(list)
+    for item in candidates:
+        by_cat[item[0].category].append(item)
+
+    # Compute target slots per category
+    slots: dict[str, int] = {}
+    for cat, pct in CATEGORY_QUOTAS.items():
+        slots[cat] = max(1, math.floor(total * pct))
+
+    # Fill each category up to its quota
+    selected: list[tuple[RawArticle, str]] = []
+    used: set[str] = set()
+    remaining_candidates: list[tuple[RawArticle, str]] = []
+
+    for cat, quota in slots.items():
+        taken = 0
+        for item in by_cat.get(cat, []):
+            if taken >= quota:
+                remaining_candidates.append(item)
+                continue
+            selected.append(item)
+            used.add(item[1])  # slug
+            taken += 1
+        # Leftover candidates from this category
+        if taken < quota:
+            pass  # not enough candidates; remaining slots filled below
+
+    # Add unused candidates from uncategorised buckets
+    for cat, items in by_cat.items():
+        if cat not in slots:
+            for item in items:
+                if item[1] not in used:
+                    remaining_candidates.append(item)
+
+    # Fill remaining slots from overflow, sorted by importance
+    remaining_candidates.sort(key=lambda x: x[0].importance, reverse=True)
+    for item in remaining_candidates:
+        if len(selected) >= total:
+            break
+        if item[1] not in used:
+            selected.append(item)
+            used.add(item[1])
+
+    # Final sort by importance
+    selected.sort(key=lambda x: x[0].importance, reverse=True)
+
+    cat_counts = defaultdict(int)
+    for a, _ in selected:
+        cat_counts[a.category] += 1
+    log.info("Category distribution: %s", dict(cat_counts))
+
+    return selected[:total]
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -888,7 +974,7 @@ def main() -> None:
             new_candidates.append((article, slug))
 
     new_candidates.sort(key=lambda x: x[0].importance, reverse=True)
-    to_synthesize = new_candidates[:MAX_ARTICLES_PER_RUN]
+    to_synthesize = select_with_quotas(new_candidates, MAX_ARTICLES_PER_RUN)
 
     log.info(
         "Discovered %d new candidates → synthesizing top %d",

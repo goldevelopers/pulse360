@@ -51,7 +51,7 @@ const catLower = category.toLowerCase();
   data-category={catLower}
 >
   {heroImage ? (
-    <a href={`${import.meta.env.BASE_URL}/news/${slug}`} tabindex="-1" class="block relative overflow-hidden">
+    <a href={`${import.meta.env.BASE_URL}news/${slug}`} tabindex="-1" class="block relative overflow-hidden">
       <img
         src={heroImage}
         alt=""
@@ -76,7 +76,7 @@ const catLower = category.toLowerCase();
     </div>
 
     <!-- Title -->
-    <a href={`${import.meta.env.BASE_URL}/news/${slug}`} class="block">
+    <a href={`${import.meta.env.BASE_URL}news/${slug}`} class="block">
       <h2 class="text-base sm:text-lg font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200" style="font-family: var(--font-prose)">
         {title}
       </h2>

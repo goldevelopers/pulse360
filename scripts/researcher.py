@@ -48,6 +48,9 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 ROOT = Path(__file__).parent.parent
 CONTENT_DIR = ROOT / "src" / "content" / "news"
 SOURCES_FILE = Path(__file__).parent / "sources.md"
+SITEMAP_DIR = ROOT / "public" / "sitemaps"
+SITEMAP_INDEX = ROOT / "public" / "sitemap.xml"
+SITE_URL = "https://pulse360.news"
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 NEWSAPI_KEY = os.environ.get("NEWSAPI_KEY", "")
@@ -753,6 +756,79 @@ def update_display_order(
 
 
 # ---------------------------------------------------------------------------
+# Sitemap generation
+# ---------------------------------------------------------------------------
+
+def generate_batch_sitemap(new_files: list[Path]) -> Path | None:
+    """Generate a sitemap XML for the current batch of new articles."""
+    if not new_files:
+        return None
+
+    SITEMAP_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(UTC).strftime("%Y-%m-%d-%H%M")
+    batch_file = SITEMAP_DIR / f"sitemap-{timestamp}.xml"
+
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    urls: list[str] = []
+    for path in new_files:
+        try:
+            rel = path.relative_to(CONTENT_DIR)
+        except ValueError:
+            continue
+        url_path = str(rel.with_suffix("")).replace("\\", "/")
+        urls.append(f"  <url>\n    <loc>{SITE_URL}/news/{url_path}</loc>\n    <lastmod>{today}</lastmod>\n  </url>")
+
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    xml += "\n".join(urls) + "\n"
+    xml += "</urlset>\n"
+
+    batch_file.write_text(xml, encoding="utf-8")
+    log.info("Generated batch sitemap: %s with %d URLs", batch_file.name, len(urls))
+    return batch_file
+
+
+def _ensure_static_sitemap() -> None:
+    """Create a sitemap for static pages if it doesn't already exist."""
+    static_file = SITEMAP_DIR / "sitemap-static.xml"
+    if static_file.exists():
+        return
+    SITEMAP_DIR.mkdir(parents=True, exist_ok=True)
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    xml += f"  <url>\n    <loc>{SITE_URL}/</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>always</changefreq>\n    <priority>1.0</priority>\n  </url>\n"
+    xml += f"  <url>\n    <loc>{SITE_URL}/archive</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>always</changefreq>\n    <priority>0.8</priority>\n  </url>\n"
+    xml += "</urlset>\n"
+    static_file.write_text(xml, encoding="utf-8")
+    log.info("Created static sitemap")
+
+
+def update_sitemap_index() -> None:
+    """Rebuild the sitemap index from all batch sitemaps in public/sitemaps/."""
+    _ensure_static_sitemap()
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+
+    batch_files = sorted(SITEMAP_DIR.glob("sitemap-*.xml"))
+    if not batch_files:
+        return
+
+    entries: list[str] = []
+    for bf in batch_files:
+        entries.append(
+            f"  <sitemap>\n    <loc>{SITE_URL}/sitemaps/{bf.name}</loc>\n    <lastmod>{today}</lastmod>\n  </sitemap>"
+        )
+
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    xml += "\n".join(entries) + "\n"
+    xml += "</sitemapindex>\n"
+
+    SITEMAP_INDEX.write_text(xml, encoding="utf-8")
+    log.info("Updated sitemap index with %d sitemaps", len(batch_files))
+
+
+# ---------------------------------------------------------------------------
 # Git commit
 # ---------------------------------------------------------------------------
 
@@ -764,6 +840,7 @@ def git_commit_all(new_files: list[Path]) -> None:
 
     try:
         subprocess.run(["git", "add", str(CONTENT_DIR)], cwd=ROOT, check=True)
+        subprocess.run(["git", "add", str(SITEMAP_DIR), str(SITEMAP_INDEX)], cwd=ROOT, check=True)
         # Check if there are staged changes
         result = subprocess.run(
             ["git", "diff", "--cached", "--exit-code"],
@@ -871,6 +948,10 @@ def main() -> None:
 
     # Phase 5: Update displayOrder on the active pool + reset fallen-off
     update_display_order(top_pool, fallen_off)
+
+    # Phase 6: Generate batch sitemap and update sitemap index
+    generate_batch_sitemap(new_files)
+    update_sitemap_index()
 
     log.info("Processed %d new articles", len(new_files))
     git_commit_all(new_files)

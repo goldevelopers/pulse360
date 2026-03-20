@@ -2,7 +2,7 @@
 category: Politics
 description: St Helens put in a dominant first-half performance to earn a Super League
   win away at Toulouse.
-displayOrder: 25
+displayOrder: 50
 heroImage: ''
 importance: 38.2
 pubDate: '2026-03-20T20:29:50Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: Odds for each team to advance through the bracket and to win the 2026
   women's college basketball championship.
-displayOrder: 19
+displayOrder: 44
 heroImage: ''
 importance: 40.5
 pubDate: '2026-03-20T20:01:48Z'

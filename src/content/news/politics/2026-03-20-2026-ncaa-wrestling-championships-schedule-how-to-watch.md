@@ -2,7 +2,7 @@
 category: Politics
 description: It's time for the 2026 NCAA wrestling championships! This year crowned
   the first women's tournament champion. Check out how to watch now.
-displayOrder: 16
+displayOrder: 41
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-20T22:34:44Z'

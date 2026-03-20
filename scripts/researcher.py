@@ -714,25 +714,31 @@ def main() -> None:
 
     log.info("=== pulse360 researcher starting ===")
 
+    # Phase 1: Discover & score (no AI tokens spent)
     sources = load_sources()
     raw_articles = discover(sources)
     existing_slugs = build_existing_slugs()
 
-    new_files: list[Path] = []
-    processed = 0
-
+    # Phase 2: Filter out duplicates, then pick top N by importance
+    candidates: list[tuple[RawArticle, str]] = []
     for article in raw_articles:
-        if processed >= MAX_ARTICLES_PER_RUN:
-            log.info("Reached MAX_ARTICLES_PER_RUN (%d), stopping early", MAX_ARTICLES_PER_RUN)
-            break
-
         slug = make_slug(article)
-
         if is_duplicate(slug, existing_slugs):
             log.debug("Skip duplicate: %s", slug)
             continue
+        candidates.append((article, slug))
 
-        log.info("Synthesizing: %s", article.title[:80])
+    # Take only the top MAX_ARTICLES_PER_RUN by importance score
+    top_candidates = candidates[:MAX_ARTICLES_PER_RUN]
+    log.info(
+        "Filtered %d candidates → top %d for synthesis (saving %d AI calls)",
+        len(candidates), len(top_candidates), len(candidates) - len(top_candidates),
+    )
+
+    # Phase 3: Synthesize only the top articles (AI tokens spent here)
+    new_files: list[Path] = []
+    for article, slug in top_candidates:
+        log.info("Synthesizing [%.1f]: %s", article.importance, article.title[:80])
         try:
             body = synthesize(article)
         except Exception as exc:
@@ -742,7 +748,6 @@ def main() -> None:
         path = write_article(article, body, slug)
         new_files.append(path)
         existing_slugs.add(slug)
-        processed += 1
 
     log.info("Processed %d new articles", len(new_files))
     git_commit_all(new_files)

@@ -38,7 +38,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           GNEWS_KEY: ${{ secrets.GNEWS_KEY }}
-          MAX_ARTICLES_PER_RUN: "60"
+          MAX_ARTICLES_PER_RUN: "25"
         run: python scripts/researcher.py
 
       - name: Check for new articles
@@ -49,7 +49,9 @@ jobs:
 
       - name: Push new articles
         if: steps.check.outputs.new_articles == '1'
-        run: git push
+        run: |
+          git pull --rebase origin main
+          git push
 
       - name: Trigger deploy
         if: steps.check.outputs.new_articles == '1'

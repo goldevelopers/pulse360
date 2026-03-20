@@ -53,7 +53,7 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 NEWSAPI_KEY = os.environ.get("NEWSAPI_KEY", "")
 GNEWS_KEY = os.environ.get("GNEWS_KEY", "")
 
-MAX_ARTICLES_PER_RUN = int(os.environ.get("MAX_ARTICLES_PER_RUN", "60"))
+MAX_ARTICLES_PER_RUN = int(os.environ.get("MAX_ARTICLES_PER_RUN", "25"))
 MAX_PER_SOURCE = int(os.environ.get("MAX_PER_SOURCE", "8"))
 LLM_MODEL = "gpt-4o-mini"
 LLM_WORD_TARGET = "400-600"
@@ -752,5 +752,4 @@ def main() -> None:
 if __name__ == "__main__":
     # Ensure scripts/ is on sys.path so imports work
     sys.path.insert(0, str(Path(__file__).parent))
-    main()
     main()

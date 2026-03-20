@@ -52,15 +52,4 @@ jobs:
         run: |
           git pull --rebase origin main
           git push
-
-      - name: Trigger deploy
-        if: steps.check.outputs.new_articles == '1'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'deploy.yml',
-              ref: 'main',
-            });
+        # Deploy workflow triggers automatically on push to main

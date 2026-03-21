@@ -3,7 +3,7 @@ category: Tech
 description: Like many people, director Valerie Veatch was intrigued when OpenAI first
   released its Sora text-to-video generative AI model to the public in 2024. Though
   she didn't fully…
-displayOrder: 38
+displayOrder: 44
 heroImage: ''
 importance: 56.2
 pubDate: '2026-03-21T14:00:00Z'

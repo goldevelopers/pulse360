@@ -3,7 +3,7 @@ category: Showbiz
 description: Even before “KPop Demon Hunters” picked up those historic statuettes
   on Oscar night, K-culture was already conquering America, with BTS packing stadiums
   and frozen kimbap selling…
-displayOrder: 45
+displayOrder: 999
 heroImage: ''
 importance: 54.8
 pubDate: '2026-03-21T14:45:25Z'

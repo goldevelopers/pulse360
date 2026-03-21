@@ -2,7 +2,7 @@
 category: Sports
 description: Here's how the race for the top overall seed looks. Plus, updated playoff
   projections, draft lottery standings.
-displayOrder: 37
+displayOrder: 43
 heroImage: ''
 importance: 56.5
 pubDate: '2026-03-21T00:14:18Z'

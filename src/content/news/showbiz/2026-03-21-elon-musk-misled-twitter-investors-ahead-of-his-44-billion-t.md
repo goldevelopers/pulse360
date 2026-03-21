@@ -3,7 +3,7 @@ category: Showbiz
 description: Elon Musk artificially drove down the price of Twitter&#8217;s stock
   in 2022 with tweets claiming the social-media company &#8212; which he had already
   agreed to acquire &#8212;…
-displayOrder: 41
+displayOrder: 47
 heroImage: ''
 importance: 55.8
 pubDate: '2026-03-21T11:52:21Z'

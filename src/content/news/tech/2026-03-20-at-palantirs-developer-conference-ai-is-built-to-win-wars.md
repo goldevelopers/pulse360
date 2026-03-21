@@ -2,7 +2,7 @@
 category: Tech
 description: As business soars, Palantir is doubling down on a vision of AI built
   for battlefield advantage—and attracting customers who agree.
-displayOrder: 46
+displayOrder: 999
 heroImage: ''
 importance: 54.2
 pubDate: '2026-03-20T15:00:00Z'

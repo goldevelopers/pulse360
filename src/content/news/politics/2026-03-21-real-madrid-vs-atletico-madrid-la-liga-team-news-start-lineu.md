@@ -2,7 +2,7 @@
 category: Politics
 description: Madrid host rivals Atletico at the Santiago Bernabeu as they aim to stay
   in touch with Barca, who are four points clear.
-displayOrder: 32
+displayOrder: 38
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-21T09:34:42Z'

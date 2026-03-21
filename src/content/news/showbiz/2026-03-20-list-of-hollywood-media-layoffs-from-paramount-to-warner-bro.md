@@ -3,7 +3,7 @@ category: Showbiz
 description: Media layoffs across the entertainment industry are hitting hard after
   last year&#8217;s avalanche of job cuts. The unfortunate trend can still be felt
   following the Covid-19…
-displayOrder: 2
+displayOrder: 3
 heroImage: ''
 importance: 75.0
 pubDate: '2026-03-20T23:48:33Z'

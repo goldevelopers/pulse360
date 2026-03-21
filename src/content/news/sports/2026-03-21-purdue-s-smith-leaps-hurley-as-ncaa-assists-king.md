@@ -3,7 +3,7 @@ category: Sports
 description: Purdue's Braden Smith broke Bobby Hurley's NCAA all-time assists record
   Friday night, reaching 1,077 for his career during a first-round NCAA tournament
   game against Queens…
-displayOrder: 23
+displayOrder: 26
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-21T04:29:51Z'

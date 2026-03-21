@@ -2,7 +2,7 @@
 category: Politics
 description: Minister Carlos Fernandez de Cossio says he is open to US trade talks
   but refused to entertain a leadership shake-up.
-displayOrder: 43
+displayOrder: 47
 heroImage: ''
 importance: 51.5
 pubDate: '2026-03-20T18:10:24Z'

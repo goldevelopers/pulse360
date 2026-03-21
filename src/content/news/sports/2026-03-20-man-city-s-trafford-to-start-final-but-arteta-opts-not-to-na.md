@@ -2,7 +2,7 @@
 category: Sports
 description: Manchester City boss Pep Guardiola confirms James Trafford will be in
   goal for Sunday's Carabao Cup final against Arsenal.
-displayOrder: 38
+displayOrder: 42
 heroImage: ''
 importance: 52.2
 pubDate: '2026-03-20T18:20:52Z'

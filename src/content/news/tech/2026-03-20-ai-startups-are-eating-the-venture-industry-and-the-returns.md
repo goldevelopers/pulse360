@@ -2,7 +2,7 @@
 category: Tech
 description: AI startups accounted for 41% of the $128 billion in venture dollars
   raised by companies on Carta last year — a record-high annual share.
-displayOrder: 30
+displayOrder: 34
 heroImage: ''
 importance: 54.0
 pubDate: '2026-03-20T15:41:21Z'

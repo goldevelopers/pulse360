@@ -3,7 +3,7 @@ category: Showbiz
 description: 'In a letter to THR, the actress aims to refute comments Weinstein made
   in his first interview from prison: “I have never exaggerated my assault. Ever.
   My account of what happened…'
-displayOrder: 42
+displayOrder: 46
 heroImage: ''
 importance: 51.8
 pubDate: '2026-03-20T22:19:20Z'

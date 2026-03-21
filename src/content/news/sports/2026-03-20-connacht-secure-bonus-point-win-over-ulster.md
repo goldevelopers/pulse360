@@ -2,7 +2,7 @@
 category: Sports
 description: Connacht produce a powerful second-half display to secure a statement
   United Rugby Championship victory over Ulster at the Affidea Stadium.
-displayOrder: 39
+displayOrder: 43
 heroImage: ''
 importance: 52.2
 pubDate: '2026-03-20T22:56:31Z'

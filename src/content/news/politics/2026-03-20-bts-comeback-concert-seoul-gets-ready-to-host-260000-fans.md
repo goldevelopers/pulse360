@@ -2,7 +2,7 @@
 category: Politics
 description: RM, Jin, Suga, J-Hope, Jimin, V and Jung Kook will perform together for
   the first time since October 2022.
-displayOrder: 44
+displayOrder: 50
 heroImage: ''
 importance: 51.2
 pubDate: '2026-03-20T23:06:10Z'

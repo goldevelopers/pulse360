@@ -2,7 +2,7 @@
 category: Politics
 description: The murder of Agnes Wanjiru hangs over the British Army Training Unit
   in Kenya (BATUK).
-displayOrder: 49
+displayOrder: 999
 heroImage: ''
 importance: 50.0
 pubDate: '2026-03-21T00:01:00Z'

@@ -3,7 +3,7 @@ category: Showbiz
 description: Wall Street is upbeat about the impact of Nexstar&#8217;s $6.2 billion
   acquisition of local TV rival Tegna, mainly because it could trigger another wave
   of consolidation.…
-displayOrder: 29
+displayOrder: 32
 heroImage: ''
 importance: 55.0
 pubDate: '2026-03-20T20:47:40Z'

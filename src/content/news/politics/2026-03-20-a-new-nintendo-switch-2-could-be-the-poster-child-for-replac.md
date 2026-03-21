@@ -3,7 +3,7 @@ category: Politics
 description: Nintendo plans to release a Switch 2 revision in the European Union that
   will let users replace their own batteries, Nikkei reports. The current version
   of the Switch 2 has a…
-displayOrder: 37
+displayOrder: 999
 heroImage: ''
 importance: 48.2
 pubDate: '2026-03-20T19:59:05Z'

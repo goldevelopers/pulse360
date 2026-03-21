@@ -3,7 +3,7 @@ category: Politics
 description: The dating reality series was originally set to premiere Sunday with
   'The Secret Lives of Mormon Wives' star as its lead. ABC has since pulled the show
   — see photos and bios of…
-displayOrder: 6
+displayOrder: 11
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-20T22:15:40Z'

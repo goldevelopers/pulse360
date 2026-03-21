@@ -2,7 +2,7 @@
 category: Politics
 description: What does Trump's Truth Social post after gas field attacks tell us about
   US-Israeli alignment?
-displayOrder: 41
+displayOrder: 999
 heroImage: ''
 importance: 47.2
 pubDate: '2026-03-19T23:19:00Z'

@@ -2,7 +2,7 @@
 category: Tech
 description: Save 30% or 10% with Samsung coupon codes, up to $1,000 on appliances,
   plus limited-time deals on the Galaxy Z Fold7, Flip7, and S25.
-displayOrder: 46
+displayOrder: 999
 heroImage: ''
 importance: 46.2
 pubDate: '2026-03-19T05:00:00Z'

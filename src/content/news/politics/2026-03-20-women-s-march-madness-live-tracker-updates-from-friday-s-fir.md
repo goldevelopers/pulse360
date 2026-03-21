@@ -2,7 +2,7 @@
 category: Politics
 description: We're following all the action from 16 games throughout Day 1 of the
   women's NCAA tournament.
-displayOrder: 34
+displayOrder: 49
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-20T22:45:47Z'

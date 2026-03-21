@@ -2,7 +2,7 @@
 category: Politics
 description: The band's 10th album sees them return to the rebellious, rap-heavy sound
   of their early days.
-displayOrder: 40
+displayOrder: 999
 heroImage: ''
 importance: 47.2
 pubDate: '2026-03-20T04:04:50Z'

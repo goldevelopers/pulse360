@@ -3,7 +3,7 @@ category: Showbiz
 description: The future of two of the biggest unscripted shows on television hangs
   in the balance as the Taylor Frankie Paul contretemps continues. ABC on Thursday
   pulled Season 22 of The…
-displayOrder: 29
+displayOrder: 46
 heroImage: ''
 importance: 50.0
 pubDate: '2026-03-20T22:36:16Z'

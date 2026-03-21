@@ -2,7 +2,7 @@
 category: Sports
 description: The Chiefs hope their free agent class can make a bigger impact than
   last year's underwhelming acquisitions.
-displayOrder: 26
+displayOrder: 38
 heroImage: ''
 importance: 50.5
 pubDate: '2026-03-20T18:50:35Z'

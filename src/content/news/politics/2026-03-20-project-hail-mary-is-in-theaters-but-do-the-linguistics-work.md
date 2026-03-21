@@ -2,7 +2,7 @@
 category: Politics
 description: Ars speaks with a linguist about the ease with which Grace and Rocky
   communicate.
-displayOrder: 33
+displayOrder: 45
 heroImage: ''
 importance: 50.0
 pubDate: '2026-03-20T11:00:06Z'

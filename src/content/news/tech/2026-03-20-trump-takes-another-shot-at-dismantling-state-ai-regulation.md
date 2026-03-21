@@ -3,7 +3,7 @@ category: Tech
 description: 'The Trump administration on Friday unveiled its new legislative blueprint
   for AI regulation, and the seven-point plan includes a clear message: The federal
   government should avoid…'
-displayOrder: 35
+displayOrder: 999
 heroImage: ''
 importance: 48.2
 pubDate: '2026-03-20T18:17:02Z'

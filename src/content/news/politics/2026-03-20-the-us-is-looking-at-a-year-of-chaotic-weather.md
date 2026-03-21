@@ -2,7 +2,7 @@
 category: Politics
 description: Massive Western heat wave, potential El Niño raise concerns about unpredictable,
   extreme weather.
-displayOrder: 31
+displayOrder: 43
 heroImage: ''
 importance: 50.0
 pubDate: '2026-03-20T14:38:50Z'

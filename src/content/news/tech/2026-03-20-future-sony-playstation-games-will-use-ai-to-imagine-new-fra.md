@@ -3,7 +3,7 @@ category: Tech
 description: Mark Cerny, the lead architect of the PlayStation 5 and PS5 Pro, told
   Digital Foundry that ML-based frame generation tech is coming to "PlayStation platforms"
   in the future,…
-displayOrder: 13
+displayOrder: 21
 heroImage: ''
 importance: 56.2
 pubDate: '2026-03-20T19:46:23Z'

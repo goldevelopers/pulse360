@@ -3,7 +3,7 @@ category: Politics
 description: Earlier this week, American director David Borenstein was supposed to
   pitch his next project at CPH:DOX’s prestigious Forum platform. He had to pull out
   at the last minute,…
-displayOrder: 24
+displayOrder: 35
 heroImage: ''
 importance: 51.8
 pubDate: '2026-03-20T21:58:13Z'

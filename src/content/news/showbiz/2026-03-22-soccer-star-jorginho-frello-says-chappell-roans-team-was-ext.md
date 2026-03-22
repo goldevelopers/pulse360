@@ -3,7 +3,7 @@ category: Showbiz
 description: The Brazilian soccer star denounced the privacy-obsessed pop star, who
   is headlining Lollapalooza Brazil in São Paulo, for her treatment of his daughter.
   He did not share the…
-displayOrder: 37
+displayOrder: 999
 heroImage: ''
 importance: 60.8
 pubDate: '2026-03-22T02:02:57Z'

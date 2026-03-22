@@ -3,7 +3,7 @@ category: Sports
 description: Fabian Edwards' wait for a world title goes on after he loses against
   Costello van Steenis, who successfully defends his PFL middleweight title with a
   third-round knockout in…
-displayOrder: 13
+displayOrder: 15
 heroImage: ''
 importance: 68.2
 pubDate: '2026-03-20T23:52:23Z'

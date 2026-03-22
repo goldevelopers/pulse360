@@ -2,7 +2,7 @@
 category: Economy
 description: Anthropic’s survey of 80,000 Claude users provides detailed snapshot
   of how people are using technology
-displayOrder: 999
+displayOrder: 40
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-22T05:00:17Z'

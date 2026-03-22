@@ -2,7 +2,7 @@
 category: Economy
 description: Rising costs for fertilizer, feed, packaging and shipping are going to
   seep into the prices that people see on grocery shelves, experts say.
-displayOrder: 999
+displayOrder: 44
 heroImage: ''
 importance: 42.5
 pubDate: '2026-03-22T15:30:00Z'

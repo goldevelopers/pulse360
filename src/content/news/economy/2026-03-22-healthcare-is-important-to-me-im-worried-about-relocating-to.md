@@ -2,7 +2,7 @@
 category: Economy
 description: “The issue is not the weather, high insurance premiums or high maintenance
   fees.”
-displayOrder: 999
+displayOrder: 39
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-22T09:31:00Z'

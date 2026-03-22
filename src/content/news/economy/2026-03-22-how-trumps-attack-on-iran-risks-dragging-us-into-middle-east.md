@@ -2,7 +2,7 @@
 category: Economy
 description: US president who pledged to end America’s forever wars has started another
   Middle East conflict with no easy off-ramps
-displayOrder: 999
+displayOrder: 34
 heroImage: ''
 importance: 55.5
 pubDate: '2026-03-22T05:00:08Z'

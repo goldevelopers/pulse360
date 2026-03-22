@@ -3,7 +3,7 @@ category: Showbiz
 description: 'UPDATED with more reactions: Arnold Schwarzenegger, Jean-Claude Van
   Damme, Sylvester Stallone, Dolph Lundgren and Stephen King are among those paying
   tribute to Chuck Norris, the…'
-displayOrder: 18
+displayOrder: 21
 heroImage: ''
 importance: 66.0
 pubDate: '2026-03-20T21:50:26Z'

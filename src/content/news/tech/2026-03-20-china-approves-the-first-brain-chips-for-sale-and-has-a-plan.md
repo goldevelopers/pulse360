@@ -2,7 +2,7 @@
 category: Tech
 description: While the United States and Europe are moving cautiously forward with
   clinical trials, China is racing toward the commercialization of brain implants.
-displayOrder: 999
+displayOrder: 32
 heroImage: ''
 importance: 58.2
 pubDate: '2026-03-20T11:44:12Z'

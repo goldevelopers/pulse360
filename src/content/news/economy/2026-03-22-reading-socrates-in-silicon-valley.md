@@ -2,7 +2,7 @@
 category: Economy
 description: Self-proclaimed stoics who denounce self-examination only prove the bankruptcy
   of the tech bro worldview
-displayOrder: 999
+displayOrder: 36
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-22T05:00:17Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: Four Qatari military personnel, one Turkish serviceman and two technicians
   from a Turkish defence company were on board.
-displayOrder: 45
+displayOrder: 999
 heroImage: ''
 importance: 59.2
 pubDate: '2026-03-22T13:35:44Z'

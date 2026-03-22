@@ -2,7 +2,7 @@
 category: Politics
 description: US president&#039;s reference to Japan&#039;s 1941 attack has shaken
   Japanese as PM Takaichi&#039;s silence gets mixed reaction.
-displayOrder: 8
+displayOrder: 7
 heroImage: ''
 importance: 73.5
 pubDate: '2026-03-21T14:34:12Z'

@@ -3,7 +3,7 @@ category: Showbiz
 description: '&#8220;Saturday Night Live U.K.&#8221; kicked off its first-ever episode
   by following the American tradition of a political cold open, featuring U.K. Prime
   Minister Keir Starmer…'
-displayOrder: 12
+displayOrder: 14
 heroImage: ''
 importance: 68.8
 pubDate: '2026-03-21T22:25:49Z'

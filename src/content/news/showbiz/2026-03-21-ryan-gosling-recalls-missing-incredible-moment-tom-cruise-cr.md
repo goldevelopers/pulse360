@@ -3,7 +3,7 @@ category: Showbiz
 description: 'Tom Cruise might have swooped in on a helicopter to direct a scene of
   Shawn Levy&#8217;s forthcoming Star Wars: Starfighter, but star Ryan Gosling wasn&#8217;t
   around to witness…'
-displayOrder: 30
+displayOrder: 999
 heroImage: ''
 importance: 63.0
 pubDate: '2026-03-21T21:27:40Z'

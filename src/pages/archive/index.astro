@@ -1,4 +1,11 @@
 ---
-import { redirect } from 'astro/runtime/server';
 ---
-{redirect('/archive/1');}
+<html>
+	<head>
+		<meta http-equiv="refresh" content="0;url=/archive/1" />
+		<title>Redirecting...</title>
+	</head>
+	<body>
+		<p>Redirecting to <a href="/archive/1">/archive/1</a>…</p>
+	</body>
+</html>

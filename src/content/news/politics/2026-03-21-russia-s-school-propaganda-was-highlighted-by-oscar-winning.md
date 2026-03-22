@@ -2,7 +2,7 @@
 category: Politics
 description: 'The messages are clear: the full-scale invasion is a defensive war and
   patriotism means unquestionable loyalty.'
-displayOrder: 3
+displayOrder: 2
 heroImage: ''
 importance: 78.2
 pubDate: '2026-03-21T01:05:03Z'

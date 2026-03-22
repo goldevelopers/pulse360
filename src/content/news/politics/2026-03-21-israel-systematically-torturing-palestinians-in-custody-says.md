@@ -2,7 +2,7 @@
 category: Politics
 description: Report by Francesca Albanese says &#039;torture in detention used on
   unprecedented scale as punitive collective vengeance&#039;.
-displayOrder: 34
+displayOrder: 37
 heroImage: ''
 importance: 59.5
 pubDate: '2026-03-21T09:31:47Z'

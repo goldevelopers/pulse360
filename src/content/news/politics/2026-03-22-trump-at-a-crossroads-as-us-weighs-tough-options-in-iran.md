@@ -2,7 +2,7 @@
 category: Politics
 description: Statements from President Trump that the war is almost over are not matching
   up with the reality on the ground.
-displayOrder: 2
+displayOrder: 3
 heroImage: ''
 importance: 78.2
 pubDate: '2026-03-22T00:50:43Z'

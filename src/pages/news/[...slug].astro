@@ -15,11 +15,13 @@ const { Content } = await render(article);
 const { title, pubDate, description, category, heroImage, sentiment, sourceUrl } = article.data;
 ---
 
+
 // Try to get the page number from the URL query or fallback to 1
 let page = 1;
 if (Astro.url && Astro.url.searchParams && Astro.url.searchParams.has('page')) {
   page = Number(Astro.url.searchParams.get('page')) || 1;
 }
+
 
 <ArticleLayout
   title={title}

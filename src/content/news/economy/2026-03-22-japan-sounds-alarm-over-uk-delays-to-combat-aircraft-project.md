@@ -2,7 +2,7 @@
 category: Economy
 description: Tokyo frustrated by funding hold-ups that are preventing the signing
   of a development contract
-displayOrder: 49
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-22T05:00:08Z'

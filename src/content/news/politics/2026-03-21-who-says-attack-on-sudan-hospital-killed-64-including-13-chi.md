@@ -2,7 +2,7 @@
 category: Politics
 description: The attack on a teaching hospital in Al Deain, the capital of East Darfur
   state, has rendered the facility non-functiona
-displayOrder: 17
+displayOrder: 999
 heroImage: ''
 importance: 67.5
 pubDate: '2026-03-21T22:43:25Z'

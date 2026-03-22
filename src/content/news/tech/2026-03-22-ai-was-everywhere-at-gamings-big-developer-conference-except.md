@@ -3,7 +3,7 @@ category: Tech
 description: AI was everywhere at the GDC Festival of Gaming this year. Vendors at
   the event pitched generative AI tools for things like making AI-driven NPCs and
   even entire games from a chat…
-displayOrder: 999
+displayOrder: 38
 heroImage: ''
 importance: 45.2
 pubDate: '2026-03-22T12:00:00Z'

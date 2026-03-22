@@ -2,7 +2,7 @@
 category: Politics
 description: What role has the UK played in Israel’s war on Gaza? We meet those who
   say it’s complicit in atrocities committed there.
-displayOrder: 9
+displayOrder: 4
 heroImage: ''
 importance: 73.5
 pubDate: '2026-03-22T13:13:27Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: Iran warns of &#039;irreversibly&#039; destroying vital infrastructure
   across region after Trump threatens to bomb power plants.
-displayOrder: 999
+displayOrder: 24
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-22T13:42:25Z'

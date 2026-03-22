@@ -3,7 +3,7 @@ category: Sports
 description: Bryson DeChambeau won for the second straight week by saving par on the
   final hole for a 6-under 65 and blistering a 3-wood from a wet lie in the rough
   on the par-5 18th in a…
-displayOrder: 999
+displayOrder: 22
 heroImage: ''
 importance: 54.5
 pubDate: '2026-03-22T13:58:21Z'

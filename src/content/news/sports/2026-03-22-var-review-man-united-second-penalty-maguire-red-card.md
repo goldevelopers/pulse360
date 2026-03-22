@@ -2,7 +2,7 @@
 category: Sports
 description: Bournemouth got a penalty to snatch a point against Man United, who later
   had a player sent off. What happened?
-displayOrder: 27
+displayOrder: 13
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-22T12:35:24Z'

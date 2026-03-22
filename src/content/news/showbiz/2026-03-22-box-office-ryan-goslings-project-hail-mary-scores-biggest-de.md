@@ -3,7 +3,7 @@ category: Showbiz
 description: Ryan Gosling&#8217;s sci-fi epic &#8220;Project Hail Mary&#8221; lived
   up to its name, collecting a stellar $80.5 million in its box office launch to deliver
   a much-needed…
-displayOrder: 999
+displayOrder: 21
 heroImage: ''
 importance: 52.8
 pubDate: '2026-03-22T14:43:11Z'

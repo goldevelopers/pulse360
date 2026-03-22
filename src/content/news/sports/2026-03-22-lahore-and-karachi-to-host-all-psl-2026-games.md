@@ -2,7 +2,7 @@
 category: Sports
 description: While the PCB has reduced the venues from six to two, the schedule for
   the games remains unchanged
-displayOrder: 999
+displayOrder: 15
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-22T16:06:00Z'

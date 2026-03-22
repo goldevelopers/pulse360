@@ -1,7 +1,7 @@
 ---
 category: Economy
 description: The country is in line for a pay-out from catastrophe bonds
-displayOrder: 47
+displayOrder: 999
 heroImage: ''
 importance: 41.5
 pubDate: '2025-10-30T08:22:35Z'

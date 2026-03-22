@@ -2,7 +2,7 @@
 category: Economy
 description: Young women still lean to the left but male youth is more rightwing than
   it has been for decades
-displayOrder: 50
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-22T05:00:08Z'

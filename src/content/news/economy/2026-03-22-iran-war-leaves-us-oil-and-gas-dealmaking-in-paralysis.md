@@ -2,7 +2,7 @@
 category: Economy
 description: Surging energy prices have made it challenging to calculate transaction
   valuations
-displayOrder: 48
+displayOrder: 46
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-22T11:00:08Z'

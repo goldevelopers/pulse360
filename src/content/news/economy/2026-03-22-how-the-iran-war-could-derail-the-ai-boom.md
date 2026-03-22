@@ -2,7 +2,7 @@
 category: Economy
 description: The entire chip supply chain depends on energy and chemical imports from
   the Middle East
-displayOrder: 999
+displayOrder: 43
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-22T12:00:08Z'

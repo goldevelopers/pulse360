@@ -3,7 +3,7 @@ category: Showbiz
 description: The Grammy winner also addressed Frello's claims that her team was “extremely
   aggressive” towards his child, saying the security guard involved in the incident
   "is not my personal…
-displayOrder: 999
+displayOrder: 19
 heroImage: ''
 importance: 51.8
 pubDate: '2026-03-22T15:30:45Z'

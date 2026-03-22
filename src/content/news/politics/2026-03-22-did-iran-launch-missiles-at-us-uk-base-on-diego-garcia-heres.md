@@ -2,7 +2,7 @@
 category: Politics
 description: UK condemns what it says is Iranian attack on airbase in Indian Ocean,
   but Tehran denies it carried out the launches.
-displayOrder: 999
+displayOrder: 34
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-22T10:03:57Z'

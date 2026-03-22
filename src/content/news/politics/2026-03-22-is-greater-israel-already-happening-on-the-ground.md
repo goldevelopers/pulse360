@@ -2,7 +2,7 @@
 category: Politics
 description: From a verse in the Bible, to a map, to strategy, to action, Greater
   Israel has stopped being just a concept.
-displayOrder: 999
+displayOrder: 20
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-22T14:32:36Z'

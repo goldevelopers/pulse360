@@ -2,7 +2,7 @@
 category: Politics
 description: David Owiro says that African countries are particularly vulnerable to
   the economic consequences of the Iran war.
-displayOrder: 999
+displayOrder: 33
 heroImage: ''
 importance: 59.5
 pubDate: '2026-03-22T08:19:46Z'

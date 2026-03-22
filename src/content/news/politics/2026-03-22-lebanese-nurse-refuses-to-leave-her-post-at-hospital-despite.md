@@ -2,7 +2,7 @@
 category: Politics
 description: Lebanese nurse remains at her post in the Bekaa Valley after losing her
   fiance in the 2024 Israel-Hezbollah war.
-displayOrder: 999
+displayOrder: 29
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-22T10:34:37Z'

@@ -993,40 +993,63 @@ def main() -> None:
         path = write_article(article, body, slug)
         new_files.append(path)
 
-    # Phase 4: Build the active homepage pool (last 2 iterations ≈ 50)
-    # Previous active = articles currently with displayOrder < 999
-    prev_active = [a for a in existing_articles if a.displayOrder < 999]
 
-    # Build merged list: newly written + previously active
-    synthesized_slugs = {make_slug(art) for art, _ in to_synthesize
-                         if any(p.stem == make_slug(art) for p in new_files)}  # slugs that actually got written
-    merged: list[dict] = []
+    # Phase 4: Build the homepage pool using quota logic for all articles (new + existing)
+    # Gather all articles (newly written and existing)
+    all_candidates: list[tuple[RawArticle, str, Path, bool]] = []  # (article, slug, path, is_new)
+    # Add new articles
     for article, slug in to_synthesize:
         cat_dir = CONTENT_DIR / article.category.lower()
         path = cat_dir / f"{slug}.md"
-        if path.exists():  # only include if synthesis succeeded
-            merged.append({
-                "slug": slug,
-                "importance": article.importance,
-                "is_new": True,
-                "article": article,
-                "path": path,
-            })
-    for ea in prev_active:
-        merged.append({
-            "slug": ea.slug,
-            "importance": ea.importance,
-            "is_new": False,
-            "path": ea.path,
-            "title": ea.title,
-        })
+        if path.exists():
+            all_candidates.append((article, slug, path, True))
+    # Add all existing articles
+    for ea in existing_articles:
+        # Try to reconstruct a RawArticle for quota logic
+        try:
+            post = frontmatter.load(str(ea.path))
+            ra = RawArticle(
+                title=post.get("title", ea.title),
+                url=post.get("sourceUrl", ""),
+                summary=post.get("description", ""),
+                source_name=post.get("source", ""),
+                category=post.get("category", ea.category),
+                published_at=datetime.strptime(post.get("pubDate", "1970-01-01T00:00:00Z"), "%Y-%m-%dT%H:%M:%SZ"),
+                importance=float(post.get("importance", ea.importance)),
+            )
+        except Exception:
+            # Fallback to minimal
+            ra = RawArticle(
+                title=ea.title,
+                url="",
+                summary="",
+                source_name="",
+                category=ea.category,
+                published_at=datetime.now(UTC),
+                importance=ea.importance,
+            )
+        all_candidates.append((ra, ea.slug, ea.path, False))
 
-    merged.sort(key=lambda x: x["importance"], reverse=True)
-    top_pool = merged[:homepage_size]
-    top_slugs = {item["slug"] for item in top_pool}
+    # Sort all by importance
+    all_candidates.sort(key=lambda x: x[0].importance, reverse=True)
+    # Use select_with_quotas to pick homepage pool (top 50 by quota)
+    homepage_pool = select_with_quotas([(a, s) for a, s, _, _ in all_candidates], homepage_size)
+    homepage_slugs = {s for _, s in homepage_pool}
 
-    # Articles that were active but didn't make the new top pool
-    fallen_off = [a for a in prev_active if a.slug not in top_slugs]
+    # Build top_pool for update_display_order
+    top_pool = []
+    for a, s in homepage_pool:
+        for ra, slug, path, is_new in all_candidates:
+            if slug == s:
+                entry = {"slug": slug, "importance": a.importance, "is_new": is_new, "article": a, "path": path}
+                if not is_new:
+                    entry["title"] = a.title
+                top_pool.append(entry)
+                break
+
+    # Any previously active articles not in homepage_pool should be reset
+    prev_active = [ea for ea in existing_articles if ea.displayOrder < 999]
+    fallen_off = [ea for ea in prev_active if ea.slug not in homepage_slugs]
 
     log.info(
         "Homepage pool: %d articles (cap %d), %d fell off",

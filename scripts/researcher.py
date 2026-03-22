@@ -1048,7 +1048,7 @@ def main() -> None:
                 summary=post.get("description", ""),
                 source_name=post.get("source", ""),
                 category=post.get("category", ea.category),
-                published_at=datetime.strptime(post.get("pubDate", "1970-01-01T00:00:00Z"), "%Y-%m-%dT%H:%M:%SZ"),
+                published_at=datetime.strptime(post.get("pubDate", "1970-01-01T00:00:00Z"), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=UTC),
                 importance=float(post.get("importance", ea.importance)),
             )
         except Exception:

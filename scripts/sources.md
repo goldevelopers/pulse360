@@ -23,6 +23,11 @@
 | Wired              | rss     | https://www.wired.com/feed/rss                               | global           | Tech                     | yes    |
 | NewsAPI Top        | newsapi | https://newsapi.org/v2/top-headlines                         | configurable     | Politics,Economy,Sports,Tech | yes    |
 | GNews              | gnews   | https://gnews.io/api/v4/top-headlines                        | configurable     | Politics,Economy,Sports,Tech | yes    |
+| Financial Times    | rss     | https://www.ft.com/?format=rss                                 | global           | Economy                  | yes    |
+| The Economist     | rss     | https://www.economist.com/finance-and-economics/rss.xml       | global           | Economy                  | yes    |
+| Bloomberg         | rss     | https://www.bloomberg.com/feed/podcast/etf-report.xml         | global           | Economy                  | yes    |
+| CNBC              | rss     | https://www.cnbc.com/id/10001147/device/rss/rss.html           | global           | Economy                  | yes    |
+| MarketWatch       | rss     | https://feeds.marketwatch.com/marketwatch/topstories/          | global           | Economy                  | yes    |
 
 ## Adding a new source
 

@@ -23,6 +23,9 @@
 | Wired              | rss     | https://www.wired.com/feed/rss                               | global           | Tech                     | yes    |
 | NewsAPI Top        | newsapi | https://newsapi.org/v2/top-headlines                         | configurable     | Politics,Economy,Sports,Tech | yes    |
 | GNews              | gnews   | https://gnews.io/api/v4/top-headlines                        | configurable     | Politics,Economy,Sports,Tech | yes    |
+| ESPN Cricinfo      | rss     | https://www.espncricinfo.com/rss/content/story/feeds/0.xml   | global           | Sports,Cricket            | yes    |
+| ICC Cricket        | rss     | https://www.icc-cricket.com/rss/news                         | global           | Sports,Cricket            | yes    |
+| BBC Sport Cricket  | rss     | http://feeds.bbci.co.uk/sport/cricket/rss.xml                | global           | Sports,Cricket            | yes    |
 | Financial Times    | rss     | https://www.ft.com/?format=rss                                 | global           | Economy                  | yes    |
 | The Economist     | rss     | https://www.economist.com/finance-and-economics/rss.xml       | global           | Economy                  | yes    |
 | Bloomberg         | rss     | https://www.bloomberg.com/feed/podcast/etf-report.xml         | global           | Economy                  | yes    |

@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+
+export async function getStaticPaths() {
+  const categories = ['politics', 'economy', 'sports', 'showbiz', 'tech'];
+  const PAGE_SIZE = 50;
+  const allArticles = await getCollection('news');
+  const paths = [];
+  for (const category of categories) {
+    const filtered = allArticles.filter(a => a.data.category.toLowerCase() === category);
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    for (let i = 1; i <= totalPages; i++) {
+      paths.push({ params: { category, page: String(i) } });
+    }
+  }
+  return paths;
+}
+
+const { category, page } = Astro.params;
+const label = category.charAt(0).toUpperCase() + category.slice(1);
+const PAGE_SIZE = 50;
+const allArticles = await getCollection('news');
+const filtered = allArticles
+  .filter(a => a.data.category.toLowerCase() === category)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+const currentPage = Math.max(1, Math.min(Number(page), totalPages));
+const start = (currentPage - 1) * PAGE_SIZE;
+const end = start + PAGE_SIZE;
+const pageArticles = filtered.slice(start, end);
+// Category counts for nav
+const categoryCounts = {};
+for (const a of allArticles) {
+  const cat = a.data.category;
+  categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+}
+---
+
+<BaseLayout title={`${label} News — Page ${currentPage}`} description={`Global ${label} news, page ${currentPage} of ${totalPages}.`}>
+  <section class="hero-section max-w-6xl mx-auto px-6 pt-8 pb-6">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-5">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] leading-tight" style="font-family: var(--font-prose)">
+          The world in a glance<span class="text-[var(--color-accent)]">.</span>
+        </h1>
+        <p class="text-sm text-[var(--color-muted)] mt-1.5">
+          AI-synthesized from 195+ sources &middot; No ads &middot; No noise
+        </p>
+      </div>
+      <div class="flex items-center gap-2 text-xs text-[var(--color-muted)] shrink-0">
+        <span class="live-pulse relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--color-accent)] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[var(--color-accent)]"></span>
+        </span>
+        <span class="tabular-nums">
+          {filtered.length} stories
+        </span>
+        <span class="opacity-40">&middot;</span>
+        <span>Updated every 4h</span>
+      </div>
+    </div>
+    <CategoryNav active={label} counts={categoryCounts} total={allArticles.length} />
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-4">
+    <div class="flex items-center gap-4">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-[var(--color-muted)]">{label} news</h2>
+      <div class="flex-1 h-px bg-[var(--color-border)]"></div>
+      <span class="text-xs text-[var(--color-muted)] opacity-50 tabular-nums">{filtered.length} stories</span>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+    {pageArticles.length === 0 ? (
+      <div class="text-center py-24 text-[var(--color-muted)]">
+        <p class="text-lg">No {label} articles yet.</p>
+        <p class="text-sm mt-2 opacity-60">Check back after the next research run.</p>
+      </div>
+    ) : (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {pageArticles.map(article => (
+          <ArticleCard
+            id={article.id}
+            slug={article.id}
+            {...article.data}
+          />
+        ))}
+      </div>
+    )}
+    <!-- Pagination -->
+    <div class="mt-14 flex justify-center gap-2">
+      {currentPage > 1 && (
+        <a href={`${import.meta.env.BASE_URL}${category}/${currentPage - 1}`} class="px-4 py-2 rounded border text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent-soft)] transition-all">Prev</a>
+      )}
+      {Array.from({ length: totalPages }, (_, i) => (
+        <a
+          href={`${import.meta.env.BASE_URL}${category}/${i + 1}`}
+          class={`px-3 py-2 rounded text-sm ${i + 1 === currentPage ? 'bg-[var(--color-accent)] text-white' : 'text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-accent-soft)]'}`}
+        >
+          {i + 1}
+        </a>
+      ))}
+      {currentPage < totalPages && (
+        <a href={`${import.meta.env.BASE_URL}${category}/${currentPage + 1}`} class="px-4 py-2 rounded border text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent-soft)] transition-all">Next</a>
+      )}
+    </div>
+  </section>
+</BaseLayout>

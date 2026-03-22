@@ -3,7 +3,7 @@ category: Showbiz
 description: Filmmakers behind the award-winning drama-thriller Eagles of the Republic
   are demanding the immediate release of actor Hassan El Sayed, who is being held
   in Egypt on what they say…
-displayOrder: 11
+displayOrder: 14
 heroImage: ''
 importance: 67.0
 pubDate: '2026-03-21T12:55:13Z'

@@ -3,7 +3,7 @@ category: Politics
 description: Nvidia’s new AI upscaling gaming technology struck gamers as uncanny
   and off-putting. Developers don't seem to like it, either, but it could be “the
   default” in a few years.
-displayOrder: 12
+displayOrder: 15
 heroImage: ''
 importance: 66.2
 pubDate: '2026-03-20T19:13:19Z'

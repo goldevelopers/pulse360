@@ -2,7 +2,7 @@
 category: Politics
 description: Emmanuel Grégoire is facing a challenge from Rachida Dati on the right
   who is behind in the opinion polls.
-displayOrder: 40
+displayOrder: 49
 heroImage: ''
 importance: 57.2
 pubDate: '2026-03-21T01:03:36Z'

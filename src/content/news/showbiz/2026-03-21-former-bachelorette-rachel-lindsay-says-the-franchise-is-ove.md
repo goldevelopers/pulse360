@@ -3,7 +3,7 @@ category: Showbiz
 description: Bachelor Nation is speaking out in the wake of ABC pulling &#8220;The
   Bachelorette&#8221; from the schedule. On Thursday, ABC announced the decision not
   to air the season, hours…
-displayOrder: 21
+displayOrder: 26
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-21T00:51:33Z'

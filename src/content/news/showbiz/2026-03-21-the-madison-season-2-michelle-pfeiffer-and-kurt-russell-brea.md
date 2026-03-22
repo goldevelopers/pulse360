@@ -3,7 +3,7 @@ category: Showbiz
 description: SPOILER ALERT:&#160;This article contains spoilers for the Season 1 finale
   of “The Madison,&#8221; now streaming on Paramount+. The too-brief first season
   of &#8220;The…
-displayOrder: 14
+displayOrder: 17
 heroImage: ''
 importance: 65.8
 pubDate: '2026-03-21T16:00:00Z'

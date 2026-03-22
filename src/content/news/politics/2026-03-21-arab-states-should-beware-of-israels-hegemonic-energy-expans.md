@@ -2,7 +2,7 @@
 category: Politics
 description: The Iran war revealed how dependent Israel’s Arab neighbours are on its
   gas exports.
-displayOrder: 42
+displayOrder: 999
 heroImage: ''
 importance: 56.5
 pubDate: '2026-03-21T16:01:31Z'

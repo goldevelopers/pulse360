@@ -3,7 +3,7 @@ category: Tech
 description: A French naval officer went on a run around the deck of the Charles de
   Gaulle aircraft carrier, inadvertently leaking the warship's location when he uploaded
   the workout to Strava.
-displayOrder: 27
+displayOrder: 33
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-20T17:21:18Z'

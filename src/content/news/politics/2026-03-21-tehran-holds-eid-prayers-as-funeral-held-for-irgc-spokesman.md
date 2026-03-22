@@ -2,7 +2,7 @@
 category: Politics
 description: Eid al-Fitr prayers were held in Tehran after overnight air strikes on
   the capital.
-displayOrder: 22
+displayOrder: 27
 heroImage: ''
 importance: 61.5
 pubDate: '2026-03-21T16:20:31Z'

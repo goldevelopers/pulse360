@@ -3,7 +3,7 @@ category: Tech
 description: The funny shape of eggs is the curious lifeblood of Oeuf, the new physics
   platformer by prolific developer Increpare Games. In a gaming landscape saturated
   with complex systems…
-displayOrder: 19
+displayOrder: 24
 heroImage: ''
 importance: 62.2
 pubDate: '2026-03-21T13:00:00Z'

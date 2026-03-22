@@ -8,7 +8,8 @@ const allArticles = await getCollection('news');
 const sorted = allArticles
   .filter(a => (a.data.displayOrder ?? 999) < 999)
   .sort((a, b) => {
-    // Primary: displayOrder (lowest first = most important)
+    // Primary: displayOrder (lowest first — researcher ranks by
+    // time-decayed importance, so fresher articles get lower values)
     const orderDiff = (a.data.displayOrder ?? 999) - (b.data.displayOrder ?? 999);
     if (orderDiff !== 0) return orderDiff;
     // Tiebreaker: newest first

@@ -87,6 +87,25 @@ CATEGORY_QUOTAS: dict[str, float] = {
     "Showbiz": 0.10,
 }
 
+# Hours after which an article's importance decays to ~10% of its original value.
+# Articles older than this are very unlikely to appear on the homepage.
+HOMEPAGE_DECAY_HOURS = float(os.environ.get("HOMEPAGE_DECAY_HOURS", "48"))
+
+
+def decayed_importance(article: "RawArticle", now: datetime | None = None) -> float:
+    """Apply time-based decay to an article's importance score.
+
+    Uses linear decay over HOMEPAGE_DECAY_HOURS so that newer articles
+    naturally displace older ones on the homepage, even if the older
+    article had a higher raw importance score.
+    """
+    if now is None:
+        now = datetime.now(UTC)
+    age_hours = max(0, (now - article.published_at).total_seconds() / 3600)
+    # Linear decay: 100% at 0h → 10% at HOMEPAGE_DECAY_HOURS → clamp at 10%
+    decay_factor = max(0.10, 1.0 - 0.9 * (age_hours / HOMEPAGE_DECAY_HOURS))
+    return article.importance * decay_factor
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -885,14 +904,29 @@ def git_commit_all(new_files: list[Path]) -> None:
 def select_with_quotas(
     candidates: list[tuple[RawArticle, str]],
     total: int,
+    use_decay: bool = False,
 ) -> list[tuple[RawArticle, str]]:
     """Select *total* articles respecting CATEGORY_QUOTAS distribution.
     Candidates must already be sorted by importance (highest first).
-    Unfilled quota slots are redistributed to other categories."""
+    Unfilled quota slots are redistributed to other categories.
+
+    When *use_decay* is True, sort by time-decayed importance so that
+    fresher articles are preferred over stale high-importance ones.
+    """
     import math
     from collections import defaultdict
 
-    # Bucket candidates by category
+    now = datetime.now(UTC)
+
+    def _sort_key(item: tuple[RawArticle, str]) -> float:
+        if use_decay:
+            return decayed_importance(item[0], now)
+        return item[0].importance
+
+    # Re-sort candidates by the chosen key (decayed or raw)
+    candidates = sorted(candidates, key=_sort_key, reverse=True)
+
+    # Bucket candidates by category (preserving sort order)
     by_cat: dict[str, list[tuple[RawArticle, str]]] = defaultdict(list)
     for item in candidates:
         by_cat[item[0].category].append(item)
@@ -927,8 +961,8 @@ def select_with_quotas(
                 if item[1] not in used:
                     remaining_candidates.append(item)
 
-    # Fill remaining slots from overflow, sorted by importance
-    remaining_candidates.sort(key=lambda x: x[0].importance, reverse=True)
+    # Fill remaining slots from overflow
+    remaining_candidates.sort(key=_sort_key, reverse=True)
     for item in remaining_candidates:
         if len(selected) >= total:
             break
@@ -936,8 +970,8 @@ def select_with_quotas(
             selected.append(item)
             used.add(item[1])
 
-    # Final sort by importance
-    selected.sort(key=lambda x: x[0].importance, reverse=True)
+    # Final sort by chosen key
+    selected.sort(key=_sort_key, reverse=True)
 
     cat_counts = defaultdict(int)
     for a, _ in selected:
@@ -1030,10 +1064,11 @@ def main() -> None:
             )
         all_candidates.append((ra, ea.slug, ea.path, False))
 
-    # Sort all by importance
-    all_candidates.sort(key=lambda x: x[0].importance, reverse=True)
-    # Use select_with_quotas to pick homepage pool (top 50 by quota)
-    homepage_pool = select_with_quotas([(a, s) for a, s, _, _ in all_candidates], homepage_size)
+    # Sort all by time-decayed importance so fresher articles are preferred
+    now = datetime.now(UTC)
+    all_candidates.sort(key=lambda x: decayed_importance(x[0], now), reverse=True)
+    # Use select_with_quotas to pick homepage pool (top 50 by quota + recency)
+    homepage_pool = select_with_quotas([(a, s) for a, s, _, _ in all_candidates], homepage_size, use_decay=True)
     homepage_slugs = {s for _, s in homepage_pool}
 
     # Build top_pool for update_display_order

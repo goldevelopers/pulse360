@@ -89,7 +89,7 @@ CATEGORY_QUOTAS: dict[str, float] = {
 
 # Hours after which an article's importance decays to ~10% of its original value.
 # Articles older than this are very unlikely to appear on the homepage.
-HOMEPAGE_DECAY_HOURS = float(os.environ.get("HOMEPAGE_DECAY_HOURS", "48"))
+HOMEPAGE_DECAY_HOURS = float(os.environ.get("HOMEPAGE_DECAY_HOURS", "24"))
 
 
 def decayed_importance(article: "RawArticle", now: datetime | None = None) -> float:
@@ -102,7 +102,7 @@ def decayed_importance(article: "RawArticle", now: datetime | None = None) -> fl
     if now is None:
         now = datetime.now(UTC)
     age_hours = max(0, (now - article.published_at).total_seconds() / 3600)
-    # Linear decay: 100% at 0h → 10% at HOMEPAGE_DECAY_HOURS → clamp at 10%
+    # Linear decay: 100% at 0h → 10% at HOMEPAGE_DECAY_HOURS, clamp at 10%
     decay_factor = max(0.10, 1.0 - 0.9 * (age_hours / HOMEPAGE_DECAY_HOURS))
     return article.importance * decay_factor
 

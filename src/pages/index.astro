@@ -5,8 +5,19 @@ import ArticleCard from '../components/ArticleCard.astro';
 import CategoryNav from '../components/CategoryNav.astro';
 
 const allArticles = await getCollection('news');
+
+// Only show articles from the last 24 hours that the researcher selected
+const MAX_AGE_MS = 24 * 60 * 60 * 1000;
+const now = Date.now();
+
 const sorted = allArticles
-  .filter(a => (a.data.displayOrder ?? 999) < 999)
+  .filter(a => {
+    const order = a.data.displayOrder ?? 999;
+    if (order >= 999) return false;
+    // Exclude stale articles even if they still have a low displayOrder
+    const age = now - a.data.pubDate.getTime();
+    return age <= MAX_AGE_MS;
+  })
   .sort((a, b) => {
     // Primary: displayOrder (lowest first — researcher ranks by
     // time-decayed importance, so fresher articles get lower values)

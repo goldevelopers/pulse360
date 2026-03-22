@@ -5,13 +5,15 @@ import ArticleCard from '../components/ArticleCard.astro';
 import CategoryNav from '../components/CategoryNav.astro';
 
 const allArticles = await getCollection('news');
-const sorted = allArticles.sort((a, b) => {
-  // Primary: displayOrder (lowest first = most important)
-  const orderDiff = (a.data.displayOrder ?? 999) - (b.data.displayOrder ?? 999);
-  if (orderDiff !== 0) return orderDiff;
-  // Tiebreaker: newest first
-  return b.data.pubDate.getTime() - a.data.pubDate.getTime();
-});
+const sorted = allArticles
+  .filter(a => (a.data.displayOrder ?? 999) < 999)
+  .sort((a, b) => {
+    // Primary: displayOrder (lowest first = most important)
+    const orderDiff = (a.data.displayOrder ?? 999) - (b.data.displayOrder ?? 999);
+    if (orderDiff !== 0) return orderDiff;
+    // Tiebreaker: newest first
+    return b.data.pubDate.getTime() - a.data.pubDate.getTime();
+  });
 const latest = sorted.slice(0, 50);
 
 // Category counts for the live ticker

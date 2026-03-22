@@ -3,7 +3,7 @@ category: Sports
 description: Michael Conlan began his professional boxing career with great fanfare
   and an ambition to become a multi-weight champion, but despite going close, he was
   unable to replicate his…
-displayOrder: 46
+displayOrder: 49
 heroImage: ''
 importance: 58.2
 pubDate: '2026-03-21T07:20:03Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: Bahrain&#039;s account differs from how the US military described the
   March 9 incident, which led to civilian injuries.
-displayOrder: 32
+displayOrder: 33
 heroImage: ''
 importance: 60.5
 pubDate: '2026-03-21T16:02:46Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: The president said ICE would "do security" as airport security staff
   have gone without pay for weeks due to a partial government shutdown.
-displayOrder: 19
+displayOrder: 20
 heroImage: ''
 importance: 65.2
 pubDate: '2026-03-21T20:22:10Z'

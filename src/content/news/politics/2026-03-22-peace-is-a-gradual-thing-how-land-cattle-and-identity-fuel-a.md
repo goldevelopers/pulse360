@@ -2,7 +2,7 @@
 category: Politics
 description: How a lack of justice and trust in the security forces perpetuates deadly
   violence in Plateau state.
-displayOrder: 45
+displayOrder: 48
 heroImage: ''
 importance: 58.2
 pubDate: '2026-03-22T00:55:31Z'

@@ -2,7 +2,7 @@
 category: Politics
 description: The left-wing Brazilian president is critical of US actions throughout
   Latin America, though he does not name Trump.
-displayOrder: 24
+displayOrder: 23
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-21T23:35:52Z'

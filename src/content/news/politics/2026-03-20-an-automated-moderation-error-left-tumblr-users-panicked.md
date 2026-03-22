@@ -3,7 +3,7 @@ category: Politics
 description: Tumblr users were left scrambling on Wednesday after dozens of accounts
   were banned in the same afternoon by an automated system. Numerous users contacted
   The Verge about the…
-displayOrder: 20
+displayOrder: 19
 heroImage: ''
 importance: 65.2
 pubDate: '2026-03-20T22:00:34Z'

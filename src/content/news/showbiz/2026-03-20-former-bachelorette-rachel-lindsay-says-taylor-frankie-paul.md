@@ -3,7 +3,7 @@ category: Showbiz
 description: “The name Bachelorette, Bachelor is tainted at this point. How do you
   move forward past that? You can't,” the former lead said during a Thursday podcast,
   where she found out in…
-displayOrder: 47
+displayOrder: 48
 heroImage: ''
 importance: 58.8
 pubDate: '2026-03-20T23:04:57Z'

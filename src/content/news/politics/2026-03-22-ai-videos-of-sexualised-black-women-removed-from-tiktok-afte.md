@@ -2,7 +2,7 @@
 category: Politics
 description: Dozens of Instagram and TikTok accounts have used AI avatars to promote
   explicit content, the BBC finds.
-displayOrder: 40
+displayOrder: 44
 heroImage: ''
 importance: 59.2
 pubDate: '2026-03-22T00:45:45Z'

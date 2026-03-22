@@ -3,7 +3,7 @@ category: Showbiz
 description: For several years now, The Rookie fans have been enthralled by the slow-burn
   romance between show&#8217;s most popular couple, Tim Bradford (Eric Winter) and
   Lucy Chen (Melissa…
-displayOrder: 31
+displayOrder: 32
 heroImage: ''
 importance: 61.0
 pubDate: '2026-03-21T16:40:59Z'

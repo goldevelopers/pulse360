@@ -3,7 +3,7 @@ category: Showbiz
 description: Sam Kieth, the comic book creator of “The Maxx” and co-creator of “Sandman,”
   died March 15. He was 63. Kieth’s lifelong friend and collaborator Scott Dunbier
   confirmed that the…
-displayOrder: 19
+displayOrder: 999
 heroImage: ''
 importance: 47.8
 pubDate: '2026-03-22T19:41:35Z'

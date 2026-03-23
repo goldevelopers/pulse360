@@ -2,7 +2,7 @@
 category: Politics
 description: Israeli army chief says the operation against Hezbollah &quot;has only
   begun&quot; and would be &quot;prolonged&quot;.
-displayOrder: 1
+displayOrder: 2
 heroImage: ''
 importance: 77.5
 pubDate: '2026-03-22T18:48:15Z'

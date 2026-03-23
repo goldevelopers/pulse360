@@ -3,7 +3,7 @@ category: Showbiz
 description: After 25 years, Josie and the Pussycats has found its cult fandom, but
   don&#8217;t expect a reunion tour anytime soon. Rachael Leigh Cook, who starred
   as the titular Riverdale…
-displayOrder: 16
+displayOrder: 999
 heroImage: ''
 importance: 53.0
 pubDate: '2026-03-22T18:00:46Z'

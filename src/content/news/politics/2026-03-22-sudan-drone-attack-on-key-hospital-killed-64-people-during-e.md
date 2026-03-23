@@ -2,7 +2,7 @@
 category: Politics
 description: The strike killed 64 people, including 13 children, two nurses and a
   doctor, according to the WHO head.
-displayOrder: 33
+displayOrder: 999
 heroImage: ''
 importance: 55.2
 pubDate: '2026-03-22T12:15:05Z'

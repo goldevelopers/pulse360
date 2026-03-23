@@ -2,7 +2,7 @@
 category: Sports
 description: Manchester City are crowned Carabao Cup champions as Nico O'Reilly's
   stunning double silenced Arsenal at Wembley.
-displayOrder: 4
+displayOrder: 11
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-22T20:58:18Z'

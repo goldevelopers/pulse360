@@ -3,7 +3,7 @@ category: Tech
 description: Reviews of Crimson Desert have been mixed, but the bigger issue for the
   game has been the discovery of what appeared to be AI-generated assets in the final
   release. Now the…
-displayOrder: 24
+displayOrder: 30
 heroImage: ''
 importance: 49.2
 pubDate: '2026-03-22T17:34:34Z'

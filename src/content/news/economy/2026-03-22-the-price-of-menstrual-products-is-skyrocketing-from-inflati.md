@@ -2,7 +2,7 @@
 category: Economy
 description: With rising inflation and changing tariff policies, menstrual products
   have seen a drastic rise in price over the past few years.
-displayOrder: 44
+displayOrder: 46
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-22T12:00:01Z'

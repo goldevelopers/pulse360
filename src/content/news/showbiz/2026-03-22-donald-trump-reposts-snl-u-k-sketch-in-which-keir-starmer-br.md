@@ -3,7 +3,7 @@ category: Showbiz
 description: President Trump didn&#8217;t seem to care that &#8220;Saturday Night
   Live U.K.&#8217;s&#8221; first-ever opening sketch was spoofing him, since he posted
   the segment on his Truth…
-displayOrder: 11
+displayOrder: 21
 heroImage: ''
 importance: 57.8
 pubDate: '2026-03-22T17:34:43Z'

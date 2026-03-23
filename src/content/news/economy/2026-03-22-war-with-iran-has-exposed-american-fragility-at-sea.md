@@ -2,7 +2,7 @@
 category: Economy
 description: The move from ‘efficiency’ to ‘resilience’ in maritime supply chains
   has a long way to go
-displayOrder: 37
+displayOrder: 41
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-22T13:00:09Z'

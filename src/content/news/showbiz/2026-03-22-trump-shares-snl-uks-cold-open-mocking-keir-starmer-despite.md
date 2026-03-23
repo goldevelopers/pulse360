@@ -3,7 +3,7 @@ category: Showbiz
 description: A longtime hater of the flagship NBC sketch comedy series, Donald Trump
   appears to be a fan of Saturday Night Live UK after its debut this weekend. On Sunday,
   the 45th/47th POTUS…
-displayOrder: 9
+displayOrder: 17
 heroImage: ''
 importance: 57.0
 pubDate: '2026-03-22T18:48:03Z'

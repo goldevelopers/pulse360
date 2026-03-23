@@ -2,7 +2,7 @@
 category: Politics
 description: Under the guise of preserving secularism, this law allows the exclusion
   of people based on their religious identity.
-displayOrder: 31
+displayOrder: 999
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-22T14:25:45Z'

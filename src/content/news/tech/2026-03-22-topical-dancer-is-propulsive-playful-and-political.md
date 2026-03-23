@@ -3,7 +3,7 @@ category: Tech
 description: Last week's recommendation, Sotomayor's Wabi Sabi, has a very particular
   vibe that you don't find in a lot of records. One of the few things it called to
   mind was 2022's Topical…
-displayOrder: 26
+displayOrder: 31
 heroImage: ''
 importance: 42.2
 pubDate: '2026-03-22T21:44:30Z'

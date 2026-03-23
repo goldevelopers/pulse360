@@ -2,7 +2,7 @@
 category: Politics
 description: Real stay within four points of league leaders Barcelona with hard-fought
   win in Madrid derby.
-displayOrder: 18
+displayOrder: 24
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-22T22:37:57Z'

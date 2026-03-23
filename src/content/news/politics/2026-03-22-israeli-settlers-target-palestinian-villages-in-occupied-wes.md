@@ -3,7 +3,7 @@ category: Politics
 description: The violence began after 18-year-old settler Yehuda Sherman was killed
   after reportedly being hit by a vehicle driven by a Palestinian while on his quad
   bike.
-displayOrder: 32
+displayOrder: 999
 heroImage: ''
 importance: 45.2
 pubDate: '2026-03-22T18:37:07Z'

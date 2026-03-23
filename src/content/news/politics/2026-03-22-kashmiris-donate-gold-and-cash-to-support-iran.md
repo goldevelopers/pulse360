@@ -2,7 +2,7 @@
 category: Politics
 description: Residents in Indian-administered Kashmir are donating their gold possessions
   and cash to support Iranians.
-displayOrder: 16
+displayOrder: 23
 heroImage: ''
 importance: 46.5
 pubDate: '2026-03-22T23:38:44Z'

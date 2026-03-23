@@ -2,7 +2,7 @@
 category: Politics
 description: Israel says it will escalate operations against Hezbollah in Lebanon,
   targeting bridges over the Litani River.
-displayOrder: 33
+displayOrder: 36
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-22T19:21:20Z'

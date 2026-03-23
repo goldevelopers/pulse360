@@ -3,7 +3,7 @@ category: Tech
 description: First came the AI beauty pageant. Then the AI music contests. Now, there
   is an award for AI Personality of the Year - perhaps the inevitable next step for
   the AI influencer…
-displayOrder: 46
+displayOrder: 50
 heroImage: ''
 importance: 48.2
 pubDate: '2026-03-23T00:01:00Z'

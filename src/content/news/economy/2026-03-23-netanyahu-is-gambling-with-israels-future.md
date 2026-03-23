@@ -1,7 +1,7 @@
 ---
 category: Economy
 description: Perpetual war and fading American popular support is a formula for disaster
-displayOrder: 24
+displayOrder: 43
 heroImage: ''
 importance: 42.5
 pubDate: '2026-03-23T11:34:06Z'

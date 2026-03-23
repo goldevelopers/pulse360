@@ -3,7 +3,7 @@ category: Showbiz
 description: Huw Edwards has spoken out for the first time since receiving a suspended
   prison sentence for accessing child abuse images. The disgraced former BBC News
   anchor has issued a…
-displayOrder: 10
+displayOrder: 999
 heroImage: ''
 importance: 57.0
 pubDate: '2026-03-23T11:05:27Z'

@@ -3,7 +3,7 @@ category: Showbiz
 description: 'EXCLUSIVE: The News Agents maker Global has found its studio boss. Craig
   Hunter, a creative director at Criminal Record producer STV Studios, has been handpicked
   by former STV…'
-displayOrder: 6
+displayOrder: 999
 heroImage: ''
 importance: 61.0
 pubDate: '2026-03-23T10:00:00Z'

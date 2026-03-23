@@ -3,7 +3,7 @@ category: Tech
 description: Govee has announced a new set of outdoor string lights that allows for
   more color customization than competitors' products, as well as the company's existing
   color-changing set.…
-displayOrder: 14
+displayOrder: 25
 heroImage: ''
 importance: 51.2
 pubDate: '2026-03-23T12:00:00Z'

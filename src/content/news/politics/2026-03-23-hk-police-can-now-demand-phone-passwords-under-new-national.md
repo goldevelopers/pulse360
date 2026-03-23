@@ -2,7 +2,7 @@
 category: Politics
 description: Those who do not comply can be jailed for up to a year and fined up to
   HK$100,000 ($12,700; £9,600).
-displayOrder: 7
+displayOrder: 22
 heroImage: ''
 importance: 65.2
 pubDate: '2026-03-23T08:06:25Z'

@@ -3,7 +3,7 @@ category: Economy
 description: Higher interest rates, forced liquidation of positions for margin calls
   and the possibility of central banks having to tap their reserves are conspiring
   to send gold lower,…
-displayOrder: 16
+displayOrder: 33
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-23T09:35:00Z'

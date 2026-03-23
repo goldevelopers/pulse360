@@ -3,7 +3,7 @@ category: Tech
 description: Samsung is bringing AirDrop support to the Quick Share feature on Galaxy
   devices, starting with the S26 series. The new AirDrop feature will begin rolling
   out in Korea starting…
-displayOrder: 19
+displayOrder: 35
 heroImage: ''
 importance: 52.2
 pubDate: '2026-03-23T09:47:27Z'

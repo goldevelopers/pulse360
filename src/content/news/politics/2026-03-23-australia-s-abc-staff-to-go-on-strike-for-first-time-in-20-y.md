@@ -2,7 +2,7 @@
 category: Politics
 description: The 24-hour long strike is expected to disrupt live television and radio
   broadcasts.
-displayOrder: 21
+displayOrder: 40
 heroImage: ''
 importance: 49.2
 pubDate: '2026-03-23T09:16:35Z'

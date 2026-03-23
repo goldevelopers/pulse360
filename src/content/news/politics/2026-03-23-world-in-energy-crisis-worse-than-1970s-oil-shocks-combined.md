@@ -2,7 +2,7 @@
 category: Politics
 description: Energy crunch prompted by Iran war poses &#039;major threat&#039; to
   global economy, Fatih Birol says.
-displayOrder: 17
+displayOrder: 36
 heroImage: ''
 importance: 59.5
 pubDate: '2026-03-23T07:07:08Z'

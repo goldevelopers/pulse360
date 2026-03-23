@@ -2,7 +2,7 @@
 category: Politics
 description: The supersonic fighter jet is designed to avoid detection by radar and
   other technologies.
-displayOrder: 5
+displayOrder: 17
 heroImage: ''
 importance: 60.5
 pubDate: '2026-03-23T11:18:10Z'

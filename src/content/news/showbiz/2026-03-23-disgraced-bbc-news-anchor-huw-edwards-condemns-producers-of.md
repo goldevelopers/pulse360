@@ -3,7 +3,7 @@ category: Showbiz
 description: Disgraced former BBC news anchor Huw Edwards has condemned an upcoming
   dramatization of his downfall. Edwards, who became the BBC’s best paid and best
   known news anchor over his…
-displayOrder: 1
+displayOrder: 5
 heroImage: ''
 importance: 71.8
 pubDate: '2026-03-23T11:43:24Z'

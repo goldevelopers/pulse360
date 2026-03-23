@@ -2,7 +2,7 @@
 category: Economy
 description: Transfer of planes to Teruel airport signals airline is preparing for
   ongoing Gulf conflict
-displayOrder: 47
+displayOrder: 999
 heroImage: ''
 importance: 33.5
 pubDate: '2026-03-23T05:00:35Z'

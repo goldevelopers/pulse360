@@ -3,7 +3,7 @@ category: Showbiz
 description: When it comes to launching a new season of Major League Baseball on NBC
   and Peacock, NBC Sports isn&#8217;t taking a half-hearted swing. The NBCUniversal
   sports division on Monday…
-displayOrder: 4
+displayOrder: 999
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-23T11:30:00Z'

@@ -2,7 +2,7 @@
 category: Sports
 description: John Calipari, who most of Kentucky's active NBA contingent played for
   in Lexington, coaches Arkansas these days.
-displayOrder: 34
+displayOrder: 999
 heroImage: ''
 importance: 46.5
 pubDate: '2026-03-23T07:00:16Z'

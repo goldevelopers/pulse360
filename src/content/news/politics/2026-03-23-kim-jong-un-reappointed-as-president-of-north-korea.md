@@ -2,7 +2,7 @@
 category: Politics
 description: North Korea’s news agencies reported that Kim Jon Un was reappointed
   to his role as president of State Affairs.
-displayOrder: 9
+displayOrder: 23
 heroImage: ''
 importance: 67.5
 pubDate: '2026-03-23T07:08:41Z'

@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from researcher import (
     RawArticle,
+    _COUNTRY_LINE_RE,
     build_existing_slugs,
     diversify_sorted,
     extract_domain,
@@ -252,6 +253,28 @@ class TestDiversifySorted:
         assert len(result) == 9
 
 
+class TestCountryLineParsing:
+    """Verify the COUNTRY: XX regex extracts country codes from LLM output."""
+
+    def test_parses_valid_country(self):
+        raw = "COUNTRY: US\n\n## Headline\n\nBody text."
+        m = _COUNTRY_LINE_RE.search(raw)
+        assert m is not None
+        assert m.group(1) == "US"
+
+    def test_no_country_line(self):
+        raw = "## Headline\n\nBody text without country."
+        m = _COUNTRY_LINE_RE.search(raw)
+        assert m is None
+
+    def test_strips_country_line_from_body(self):
+        raw = "COUNTRY: GB\n\n## Headline\n\nBody text."
+        m = _COUNTRY_LINE_RE.search(raw)
+        body = (raw[:m.start()] + raw[m.end():]).strip()
+        assert "COUNTRY" not in body
+        assert body.startswith("## Headline")
+
+
 class TestWriteArticle:
     def test_file_is_created(self, tmp_path: Path):
         import researcher
@@ -297,6 +320,40 @@ class TestWriteArticle:
             assert post["source"] == "example.com"
             assert post["importance"] >= 0
             assert post["sentiment"] in ("Positive", "Negative", "Neutral")
+            assert "country" not in post.metadata
+            assert "countryCode" not in post.metadata
+        finally:
+            researcher.CONTENT_DIR = original
+
+    def test_frontmatter_country_from_synthesis(self, tmp_path: Path):
+        """When country_code is provided, country and countryCode appear in frontmatter."""
+        import frontmatter as fm
+        import researcher
+        original = researcher.CONTENT_DIR
+        researcher.CONTENT_DIR = tmp_path
+        try:
+            a = _make_article()
+            slug = make_slug(a)
+            write_article(a, "## Summary\n\nBody.", slug, country_code="US")
+            expected_path = tmp_path / "politics" / f"{slug}.md"
+            post = fm.load(str(expected_path))
+            assert post["country"] == "United States"
+            assert post["countryCode"] == "US"
+        finally:
+            researcher.CONTENT_DIR = original
+
+    def test_frontmatter_country_zz_omitted(self, tmp_path: Path):
+        """ZZ (global) country code should not produce country fields."""
+        import frontmatter as fm
+        import researcher
+        original = researcher.CONTENT_DIR
+        researcher.CONTENT_DIR = tmp_path
+        try:
+            a = _make_article()
+            slug = make_slug(a)
+            write_article(a, "## Summary\n\nBody.", slug, country_code="ZZ")
+            expected_path = tmp_path / "politics" / f"{slug}.md"
+            post = fm.load(str(expected_path))
             assert "country" not in post.metadata
             assert "countryCode" not in post.metadata
         finally:

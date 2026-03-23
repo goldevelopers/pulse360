@@ -41,6 +41,8 @@ from openai import OpenAI
 from slugify import slugify
 from tenacity import retry, stop_after_attempt, wait_exponential
 
+from countries import COUNTRIES
+
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
@@ -653,13 +655,27 @@ SYSTEM_PROMPT = (
     "a global news platform. Your writing is calm, precise, and insightful — free of "
     "sensationalism, bias, and clickbait. Use Markdown headers (## ) to structure the "
     "article. Write in English regardless of the source language. "
-    f"Target length: {LLM_WORD_TARGET} words."
+    f"Target length: {LLM_WORD_TARGET} words.\n\n"
+    "IMPORTANT: On the very first line of your response, output the ISO 3166-1 alpha-2 "
+    "country code of the country this article is primarily about, in this exact format:\n"
+    "COUNTRY: XX\n"
+    "Use the code that best represents the main country of the story (e.g. US, GB, FR, "
+    "CN, IN). If the story is truly global with no single primary country, use COUNTRY: ZZ.\n"
+    "Then leave a blank line and write the article body."
 )
 
 
+_COUNTRY_LINE_RE = re.compile(r"^COUNTRY:\s*([A-Z]{2})\s*$", re.MULTILINE)
+
+
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=30))
-def synthesize(article: RawArticle) -> str:
-    """Call GPT-4o-mini to synthesize a full Markdown article body."""
+def synthesize(article: RawArticle) -> tuple[str, str]:
+    """Call GPT-4o-mini to synthesize a full Markdown article body.
+
+    Returns (body, country_code) where country_code is a 2-letter ISO code
+    extracted from the first line of the LLM response (e.g. "US", "GB").
+    Falls back to "" if the model doesn't include the COUNTRY line.
+    """
     if client is None:
         raise RuntimeError("OPENAI_API_KEY is not set")
 
@@ -679,7 +695,18 @@ def synthesize(article: RawArticle) -> str:
         temperature=0.4,
         max_tokens=900,
     )
-    return response.choices[0].message.content or ""
+    raw = response.choices[0].message.content or ""
+
+    # Extract country code from the COUNTRY: XX line
+    country_code = ""
+    m = _COUNTRY_LINE_RE.search(raw)
+    if m:
+        country_code = m.group(1)
+        # Strip the COUNTRY line from the body
+        raw = raw[:m.start()] + raw[m.end():]
+
+    body = raw.strip()
+    return body, country_code
 
 
 def infer_sentiment(text: str) -> str:
@@ -707,7 +734,7 @@ def truncate_description(text: str, max_chars: int = 180) -> str:
 # Writer
 # ---------------------------------------------------------------------------
 
-def write_article(article: RawArticle, body: str, slug: str) -> Path:
+def write_article(article: RawArticle, body: str, slug: str, country_code: str = "") -> Path:
     """Persist a synthesized article as a Markdown file with YAML frontmatter."""
     output_dir = CONTENT_DIR / article.category.lower()
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -736,6 +763,11 @@ def write_article(article: RawArticle, body: str, slug: str) -> Path:
         sentiment=sentiment,
         tags=[article.category],
     )
+
+    # Add country fields if a valid code was returned by the LLM
+    if country_code and country_code != "ZZ" and country_code in COUNTRIES:
+        post.metadata["country"] = COUNTRIES[country_code]["name"]
+        post.metadata["countryCode"] = country_code
 
     output_path.write_text(frontmatter.dumps(post), encoding="utf-8")
     try:
@@ -1020,11 +1052,11 @@ def main() -> None:
     for article, slug in to_synthesize:
         log.info("Synthesizing [%.1f]: %s", article.importance, article.title[:80])
         try:
-            body = synthesize(article)
+            body, country_code = synthesize(article)
         except Exception as exc:
             log.warning("Synthesis failed for '%s': %s — skipping", article.title[:60], exc)
             continue
-        path = write_article(article, body, slug)
+        path = write_article(article, body, slug, country_code=country_code)
         new_files.append(path)
 
 

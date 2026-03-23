@@ -42,6 +42,7 @@ const canon = canonicalUrl ?? Astro.url.href;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="alternate" type="application/rss+xml" title="pulse360 RSS Feed" href="/rss.xml" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,6 +101,14 @@ const canon = canonicalUrl ?? Astro.url.href;
             class="text-sm tracking-wider uppercase text-[var(--color-muted)] hover:text-[var(--color-ink)] transition-colors font-medium"
           >
             Archive
+          </a>
+          <div class="w-px h-4 bg-[var(--color-border)]"></div>
+          <a
+            href="/rss.xml"
+            aria-label="RSS Feed"
+            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[var(--color-accent-soft)] transition-all duration-200 text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
           </a>
           <div class="w-px h-4 bg-[var(--color-border)]"></div>
           <button

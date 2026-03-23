@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import CategoryNav from '../../components/CategoryNav.astro';
+import { getReadingTime } from '../../utils/readingTime';
 
 export async function getStaticPaths() {
   const categories = ['politics', 'economy', 'sports', 'showbiz', 'tech'];
@@ -85,6 +86,7 @@ for (const a of allArticles) {
           <ArticleCard
             id={article.id}
             slug={article.id}
+            readingTime={getReadingTime(article.body ?? '')}
             {...article.data}
           />
         ))}

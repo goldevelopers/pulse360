@@ -12,9 +12,10 @@ interface Props {
   sentiment: 'Positive' | 'Negative' | 'Neutral';
   sourceUrl: string;
   page?: number;
+  readingTime?: number;
 }
 
-const { title, description, pubDate, category, heroImage, sourceUrl, page } = Astro.props;
+const { title, description, pubDate, category, heroImage, sourceUrl, page, readingTime } = Astro.props;
 
 const sourceDomain = (() => {
   try { return new URL(sourceUrl).hostname.replace(/^www\./, ''); } catch { return 'source'; }
@@ -67,6 +68,12 @@ const articleJsonLd = {
         <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent)]">{category}</span>
         <span class="text-xs text-[var(--color-muted)]">&middot;</span>
         <time class="text-xs text-[var(--color-muted)]" datetime={pubDate.toISOString()}>{formattedDate}</time>
+        {readingTime && (
+          <>
+            <span class="text-xs text-[var(--color-muted)]">&middot;</span>
+            <span class="text-xs text-[var(--color-muted)]">{readingTime} min read</span>
+          </>
+        )}
       </div>
 
       <h1 class="text-3xl sm:text-[2.5rem] font-bold leading-[1.15] text-[var(--color-ink)] mb-5 animate-[fade-up_0.6s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]" style="font-family: var(--font-prose)">

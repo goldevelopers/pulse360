@@ -11,9 +11,10 @@ interface Props {
   sentiment: 'Positive' | 'Negative' | 'Neutral';
   sourceUrl: string;
   slug: string;
+  readingTime?: number;
 }
 
-const { id, title, pubDate, description, country, countryCode, category, heroImage, sentiment, sourceUrl, slug } = Astro.props;
+const { id, title, pubDate, description, country, countryCode, category, heroImage, sentiment, sourceUrl, slug, readingTime } = Astro.props;
 
 const sentimentDot = {
   Positive: 'bg-emerald-500',
@@ -73,7 +74,13 @@ const catLower = category.toLowerCase();
           {category}
         </span>
       </div>
-      <span class="text-xs text-[var(--color-muted)] tabular-nums">{relativeTime}</span>
+      <div class="flex items-center gap-2">
+        {readingTime && (
+          <span class="text-xs text-[var(--color-muted)] tabular-nums">{readingTime} min read</span>
+        )}
+        {readingTime && <span class="text-xs text-[var(--color-muted)] opacity-40">&middot;</span>}
+        <span class="text-xs text-[var(--color-muted)] tabular-nums">{relativeTime}</span>
+      </div>
     </div>
 
     <!-- Title -->

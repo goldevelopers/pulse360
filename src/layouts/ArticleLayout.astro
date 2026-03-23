@@ -13,9 +13,10 @@ interface Props {
   sourceUrl: string;
   page?: number;
   readingTime?: number;
+  tags?: string[];
 }
 
-const { title, description, pubDate, category, heroImage, sourceUrl, page, readingTime } = Astro.props;
+const { title, description, pubDate, category, heroImage, sourceUrl, page, readingTime, tags = [] } = Astro.props;
 
 const sourceDomain = (() => {
   try { return new URL(sourceUrl).hostname.replace(/^www\./, ''); } catch { return 'source'; }
@@ -132,6 +133,20 @@ const articleJsonLd = {
         Share
       </button>
     </div>
+
+    {tags.length > 0 && (
+      <div class="mt-6 flex flex-wrap gap-2 animate-[fade-up_0.5s_cubic-bezier(0.22,1,0.36,1)_0.55s_both]">
+        {tags.map((tag) => (
+          <a
+            href={`${import.meta.env.BASE_URL}tags/${encodeURIComponent(tag)}`}
+            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs border border-[var(--color-border)] text-[var(--color-muted)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent-soft)] transition-all"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>
+            {tag}
+          </a>
+        ))}
+      </div>
+    )}
   </article>
 
   <slot name="after-article" />

@@ -104,6 +104,20 @@ const canon = canonicalUrl ?? Astro.url.href;
           </a>
           <div class="w-px h-4 bg-[var(--color-border)]"></div>
           <a
+            href={`${import.meta.env.BASE_URL}bookmarks`}
+            aria-label="Bookmarks"
+            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[var(--color-accent-soft)] transition-all duration-200 text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+          </a>
+          <button
+            id="search-toggle"
+            aria-label="Search articles"
+            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[var(--color-accent-soft)] transition-all duration-200 text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+          <a
             href="/rss.xml"
             aria-label="RSS Feed"
             class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[var(--color-accent-soft)] transition-all duration-200 text-[var(--color-muted)] hover:text-[var(--color-accent)]"
@@ -194,6 +208,158 @@ const canon = canonicalUrl ?? Astro.url.href;
         const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         applyTheme(next);
       });
+    </script>
+
+    <!-- Search modal -->
+    <div id="search-modal" class="fixed inset-0 z-[100] hidden">
+      <div id="search-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative max-w-xl mx-auto mt-[15vh] px-6">
+        <div class="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] shadow-2xl overflow-hidden">
+          <div class="flex items-center gap-3 px-5 border-b border-[var(--color-border)]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--color-muted)] shrink-0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search articles…"
+              autocomplete="off"
+              class="w-full py-4 bg-transparent text-[var(--color-ink)] placeholder:text-[var(--color-muted)] outline-none text-base"
+            />
+            <kbd class="hidden sm:inline-flex text-[10px] font-medium text-[var(--color-muted)] border border-[var(--color-border)] rounded px-1.5 py-0.5">ESC</kbd>
+          </div>
+          <div id="search-results" class="max-h-[50vh] overflow-y-auto p-2">
+            <p class="px-3 py-6 text-sm text-center text-[var(--color-muted)]">Start typing to search…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Search modal
+      import Fuse from 'fuse.js';
+
+      let fuse: Fuse<any> | null = null;
+      let searchIndex: any[] = [];
+      const modal = document.getElementById('search-modal')!;
+      const backdrop = document.getElementById('search-backdrop')!;
+      const input = document.getElementById('search-input') as HTMLInputElement;
+      const results = document.getElementById('search-results')!;
+      const searchToggle = document.getElementById('search-toggle')!;
+
+      async function loadIndex() {
+        if (searchIndex.length) return;
+        const res = await fetch('/search-index.json');
+        searchIndex = await res.json();
+        fuse = new Fuse(searchIndex, {
+          keys: ['title', 'description', 'category', 'tags'],
+          threshold: 0.35,
+          limit: 12,
+        });
+      }
+
+      function openSearch() {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        input.value = '';
+        results.innerHTML = '<p class="px-3 py-6 text-sm text-center text-[var(--color-muted)]">Start typing to search…</p>';
+        loadIndex();
+        setTimeout(() => input.focus(), 50);
+      }
+
+      function closeSearch() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function renderResults(items: any[]) {
+        if (!items.length) {
+          results.innerHTML = '<p class="px-3 py-6 text-sm text-center text-[var(--color-muted)]">No results found.</p>';
+          return;
+        }
+        results.innerHTML = items
+          .map(
+            (item) => `
+            <a href="/news/${item.slug}" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-[var(--color-accent-soft)] transition-colors group">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors leading-snug">${item.title}</p>
+                <p class="text-xs text-[var(--color-muted)] mt-1 line-clamp-1">${item.category} · ${item.description}</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--color-muted)] shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity"><path d="m9 18 6-6-6-6"/></svg>
+            </a>`
+          )
+          .join('');
+      }
+
+      searchToggle.addEventListener('click', openSearch);
+      backdrop.addEventListener('click', closeSearch);
+
+      document.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          modal.classList.contains('hidden') ? openSearch() : closeSearch();
+        }
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeSearch();
+        }
+      });
+
+      input.addEventListener('input', () => {
+        const q = input.value.trim();
+        if (!q) {
+          results.innerHTML = '<p class="px-3 py-6 text-sm text-center text-[var(--color-muted)]">Start typing to search…</p>';
+          return;
+        }
+        if (!fuse) return;
+        const hits = fuse.search(q).map((r: any) => r.item);
+        renderResults(hits);
+      });
+    </script>
+
+    <script>
+      // Bookmark buttons
+      const BOOKMARKS_KEY = 'pulse360_bookmarks';
+
+      function getBookmarks(): string[] {
+        try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) ?? '[]'); }
+        catch { return []; }
+      }
+
+      function toggleBookmark(slug: string) {
+        const bm = getBookmarks();
+        const idx = bm.indexOf(slug);
+        if (idx >= 0) bm.splice(idx, 1);
+        else bm.push(slug);
+        localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bm));
+        return idx < 0; // true if now bookmarked
+      }
+
+      function syncBookmarkIcons() {
+        const bm = new Set(getBookmarks());
+        document.querySelectorAll('.bookmark-btn').forEach((btn) => {
+          const el = btn as HTMLElement;
+          const slug = el.dataset.slug ?? '';
+          const svg = el.querySelector('svg')!;
+          if (bm.has(slug)) {
+            svg.setAttribute('fill', 'currentColor');
+            el.classList.add('text-[var(--color-accent)]');
+          } else {
+            svg.setAttribute('fill', 'none');
+            el.classList.remove('text-[var(--color-accent)]');
+          }
+        });
+      }
+
+      document.querySelectorAll('.bookmark-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const el = e.currentTarget as HTMLElement;
+          const slug = el.dataset.slug ?? '';
+          toggleBookmark(slug);
+          syncBookmarkIcons();
+        });
+      });
+
+      syncBookmarkIcons();
     </script>
 
     <script>

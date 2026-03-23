@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Bookmarks" description="Your saved articles on pulse360.">
+  <section class="max-w-6xl mx-auto px-6 pt-14 pb-6">
+    <div class="flex items-center gap-4 mb-2">
+      <a
+        href={`${import.meta.env.BASE_URL}`}
+        class="inline-flex items-center gap-1 text-sm font-medium uppercase tracking-widest text-[var(--color-muted)] hover:text-[var(--color-accent)] transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Feed
+      </a>
+      <div class="w-px h-4 bg-[var(--color-border)]"></div>
+      <h1 class="text-xl sm:text-2xl font-bold text-[var(--color-ink)]" style="font-family: var(--font-prose)">
+        Bookmarks
+      </h1>
+    </div>
+    <p class="text-sm text-[var(--color-muted)] mb-10 opacity-60">
+      Your saved articles, stored locally in your browser.
+    </p>
+
+    <div id="bookmarks-empty" class="text-center py-24 text-[var(--color-muted)] hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4 opacity-40"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+      <p class="text-lg">No bookmarks yet.</p>
+      <p class="text-sm mt-2 opacity-60">Tap the bookmark icon on any article to save it here.</p>
+    </div>
+
+    <div id="bookmarks-loading" class="text-center py-24 text-[var(--color-muted)]">
+      <p class="text-sm opacity-60">Loading bookmarks…</p>
+    </div>
+
+    <div id="bookmarks-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
+  </section>
+
+  <script>
+    const BOOKMARKS_KEY = 'pulse360_bookmarks';
+    const grid = document.getElementById('bookmarks-grid')!;
+    const empty = document.getElementById('bookmarks-empty')!;
+    const loading = document.getElementById('bookmarks-loading')!;
+
+    function getBookmarks(): string[] {
+      try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) ?? '[]'); }
+      catch { return []; }
+    }
+
+    function relativeTime(date: string) {
+      const diff = Date.now() - new Date(date).getTime();
+      const minutes = Math.floor(diff / 60000);
+      if (minutes < 60) return `${minutes}m ago`;
+      const hours = Math.floor(minutes / 60);
+      if (hours < 24) return `${hours}h ago`;
+      const days = Math.floor(hours / 24);
+      return `${days}d ago`;
+    }
+
+    async function render() {
+      const slugs = getBookmarks();
+      if (!slugs.length) {
+        loading.classList.add('hidden');
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      const res = await fetch('/search-index.json');
+      const all: any[] = await res.json();
+      const slugSet = new Set(slugs);
+      const bookmarked = all.filter((a) => slugSet.has(a.slug));
+
+      loading.classList.add('hidden');
+
+      if (!bookmarked.length) {
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      grid.classList.remove('hidden');
+
+      const categoryColors: Record<string, string> = {
+        politics: 'text-indigo-600',
+        economy: 'text-amber-600',
+        sports: 'text-sky-600',
+        showbiz: 'text-pink-600',
+        tech: 'text-emerald-600',
+      };
+
+      grid.innerHTML = bookmarked
+        .map((a) => {
+          const catLower = a.category.toLowerCase();
+          const catColor = categoryColors[catLower] ?? 'text-gray-500';
+          const time = relativeTime(a.pubDate);
+          const heroHtml = a.heroImage
+            ? `<a href="/news/${a.slug}" tabindex="-1" class="block relative overflow-hidden"><img src="${a.heroImage}" alt="" loading="lazy" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" /></a>`
+            : '<div class="h-1 bg-[var(--color-accent)]"></div>';
+
+          return `
+            <article class="card-animate group relative flex flex-col bg-[var(--color-surface)] rounded-2xl overflow-hidden border border-[var(--color-border)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]" style="box-shadow: var(--shadow-card);">
+              ${heroHtml}
+              <div class="p-6 flex flex-col gap-3 flex-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold uppercase tracking-widest ${catColor}">${a.category}</span>
+                  <span class="text-xs text-[var(--color-muted)] tabular-nums">${time}</span>
+                </div>
+                <a href="/news/${a.slug}" class="block">
+                  <h2 class="text-base sm:text-lg font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors duration-200" style="font-family: var(--font-prose)">${a.title}</h2>
+                </a>
+                <p class="text-sm text-[var(--color-muted)] leading-relaxed line-clamp-2">${a.description}</p>
+                <div class="pt-2 mt-auto border-t border-[var(--color-border)] flex items-center justify-end text-xs text-[var(--color-muted)]">
+                  <button class="bookmark-remove-btn flex items-center gap-1 text-[var(--color-accent)] hover:text-red-500 transition-colors" data-slug="${a.slug}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </article>`;
+        })
+        .join('');
+
+      // Attach remove handlers
+      grid.querySelectorAll('.bookmark-remove-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          const el = e.currentTarget as HTMLElement;
+          const slug = el.dataset.slug ?? '';
+          const bm = getBookmarks().filter((s) => s !== slug);
+          localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bm));
+          render();
+        });
+      });
+    }
+
+    render();
+  </script>
+</BaseLayout>

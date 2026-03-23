@@ -1,10 +1,11 @@
 ---
 /**
- * Interactive SVG world-map with clickable country outlines.
+ * Interactive SVG world-map with real country outlines from Natural Earth data.
  * Each country highlights on hover and links to /country/<code>.
  * Countries with articles get an accent fill; others stay muted.
- * Uses simplified equirectangular projection paths.
  */
+import worldPaths from '../data/world-map-paths.json';
+
 interface Props {
   /** Set of country codes that have at least one article */
   activeCodes?: Set<string>;
@@ -12,53 +13,8 @@ interface Props {
 
 const { activeCodes = new Set() } = Astro.props;
 
-// Simplified SVG paths for each country (equirectangular projection, viewBox 0 0 1000 500)
-const countries: { code: string; name: string; d: string }[] = [
-  // North America
-  { code: 'CA', name: 'Canada', d: 'M111 114 L156 115 L211 114 L236 114 L314 125 L347 119 L333 83 L280 58 L236 47 L170 50 L111 56Z' },
-  { code: 'US', name: 'United States', d: 'M156 115 L211 114 L236 114 L280 119 L314 125 L300 139 L292 153 L278 181 L250 169 L231 178 L200 172 L175 160 L156 133Z' },
-  { code: 'MX', name: 'Mexico', d: 'M175 160 L200 172 L231 178 L236 186 L258 208 L244 211 L228 206 L208 197 L194 186Z' },
-  { code: 'CU', name: 'Cuba', d: 'M267 192 L286 189 L294 192 L281 197Z' },
-  // South America
-  { code: 'CO', name: 'Colombia', d: 'M286 217 L300 211 L314 217 L319 231 L311 244 L297 247 L283 239Z' },
-  { code: 'BR', name: 'Brazil', d: 'M319 250 L333 236 L358 236 L392 247 L403 258 L400 278 L389 297 L372 314 L356 336 L342 325 L331 303 L319 283Z' },
-  { code: 'AR', name: 'Argentina', d: 'M331 314 L342 325 L356 336 L350 358 L342 378 L331 389 L319 381 L314 361 L322 339Z' },
-  // Europe
-  { code: 'GB', name: 'United Kingdom', d: 'M486 106 L489 97 L494 89 L497 94 L500 100 L500 108 L494 111Z' },
-  { code: 'FR', name: 'France', d: 'M486 117 L494 111 L506 108 L519 114 L519 125 L514 131 L503 133 L494 131Z' },
-  { code: 'ES', name: 'Spain', d: 'M475 133 L494 131 L503 133 L506 139 L497 150 L483 150 L475 144Z' },
-  { code: 'DE', name: 'Germany', d: 'M517 97 L528 94 L539 97 L542 106 L539 114 L528 117 L519 114 L517 106Z' },
-  { code: 'IT', name: 'Italy', d: 'M519 122 L525 119 L531 122 L536 131 L533 142 L528 150 L522 147 L519 136Z' },
-  { code: 'PL', name: 'Poland', d: 'M536 97 L547 94 L558 97 L561 106 L556 114 L544 114 L536 108Z' },
-  { code: 'UA', name: 'Ukraine', d: 'M561 103 L572 100 L589 100 L603 103 L608 111 L603 119 L589 122 L575 122 L561 117Z' },
-  { code: 'RO', name: 'Romania', d: 'M556 117 L567 114 L578 117 L581 125 L575 131 L564 131 L556 125Z' },
-  // Russia
-  { code: 'RU', name: 'Russia', d: 'M578 97 L608 89 L647 86 L711 83 L778 83 L833 86 L875 92 L917 78 L958 72 L975 56 L936 47 L875 42 L778 42 L694 44 L625 50 L578 58 L569 72 L575 83Z' },
-  // Middle East
-  { code: 'TR', name: 'Turkey', d: 'M567 133 L578 128 L594 128 L611 131 L622 136 L622 144 L608 150 L589 150 L575 147 L567 142Z' },
-  { code: 'IL', name: 'Israel', d: 'M594 156 L600 153 L603 158 L600 167 L594 167Z' },
-  { code: 'SA', name: 'Saudi Arabia', d: 'M597 164 L611 158 L633 164 L647 178 L639 200 L622 206 L603 200 L597 186Z' },
-  { code: 'AE', name: 'UAE', d: 'M639 181 L653 178 L658 183 L653 192 L642 192Z' },
-  { code: 'IR', name: 'Iran', d: 'M622 136 L639 133 L658 136 L669 147 L669 172 L658 178 L642 178 L628 172 L622 158Z' },
-  // Africa
-  { code: 'EG', name: 'Egypt', d: 'M567 156 L589 153 L597 158 L597 183 L583 192 L567 189Z' },
-  { code: 'NG', name: 'Nigeria', d: 'M500 211 L514 206 L528 208 L536 217 L536 233 L525 239 L511 236 L500 228Z' },
-  { code: 'ET', name: 'Ethiopia', d: 'M583 206 L603 200 L617 206 L622 219 L617 231 L600 236 L586 231 L583 219Z' },
-  { code: 'KE', name: 'Kenya', d: 'M600 236 L614 233 L622 239 L622 258 L614 264 L603 261 L600 250Z' },
-  { code: 'ZA', name: 'South Africa', d: 'M550 311 L572 306 L589 308 L597 319 L592 339 L578 350 L558 350 L547 339 L547 325Z' },
-  // Asia
-  { code: 'PK', name: 'Pakistan', d: 'M669 144 L686 139 L700 144 L708 153 L706 167 L694 178 L678 178 L669 167Z' },
-  { code: 'IN', name: 'India', d: 'M694 150 L711 144 L728 150 L742 167 L742 189 L731 208 L719 225 L706 225 L694 214 L686 194 L686 172Z' },
-  { code: 'CN', name: 'China', d: 'M703 114 L742 103 L783 100 L831 103 L847 114 L842 136 L831 153 L814 167 L792 175 L769 178 L747 172 L722 164 L703 147Z' },
-  { code: 'TH', name: 'Thailand', d: 'M775 189 L786 183 L794 189 L794 208 L789 222 L783 228 L775 217Z' },
-  { code: 'JP', name: 'Japan', d: 'M878 122 L892 117 L900 122 L897 136 L889 153 L878 161 L872 156 L875 139Z' },
-  { code: 'KR', name: 'South Korea', d: 'M856 139 L864 133 L872 139 L869 153 L861 158 L853 153Z' },
-  { code: 'PH', name: 'Philippines', d: 'M833 192 L844 186 L853 192 L853 214 L847 225 L836 222 L831 211Z' },
-  { code: 'ID', name: 'Indonesia', d: 'M764 236 L786 231 L808 233 L836 239 L869 247 L881 258 L864 267 L831 269 L800 264 L775 258 L764 250Z' },
-  // Oceania
-  { code: 'AU', name: 'Australia', d: 'M817 281 L856 275 L897 275 L925 281 L931 303 L925 325 L911 347 L889 356 L856 356 L831 347 L817 331 L814 306Z' },
-  { code: 'NZ', name: 'New Zealand', d: 'M961 347 L972 339 L981 344 L983 361 L975 378 L967 375 L961 364Z' },
-];
+// All country entries: [alpha2Code, svgPathData]
+const allCountries = Object.entries(worldPaths as Record<string, string>);
 ---
 
 <div class="world-map-container w-full overflow-x-auto">
@@ -71,66 +27,36 @@ const countries: { code: string; name: string; d: string }[] = [
     preserveAspectRatio="xMidYMid meet"
   >
     <!-- Ocean background -->
-    <rect width="1000" height="500" fill="var(--color-surface)" rx="12" />
+    <rect width="1000" height="500" fill="var(--color-surface)" rx="8" />
 
-    <!-- Subtle grid / graticule lines -->
-    <g opacity="0.06" stroke="var(--color-ink)">
-      {/* Longitude lines every 30 degrees */}
-      {Array.from({ length: 13 }, (_, i) => (
-        <line x1={i * (1000 / 12)} y1="0" x2={i * (1000 / 12)} y2="500" stroke-width="0.5" />
-      ))}
-      {/* Latitude lines every 30 degrees */}
-      {Array.from({ length: 7 }, (_, i) => (
-        <line x1="0" y1={i * (500 / 6)} x2="1000" y2={i * (500 / 6)} stroke-width="0.5" />
-      ))}
-      {/* Equator slightly stronger */}
-      <line x1="0" y1="250" x2="1000" y2="250" stroke-width="1" opacity="0.5" />
-    </g>
-
-    {/* Country shapes */}
-    {countries.map(c => {
-      const hasArticles = activeCodes.has(c.code);
+    <!-- All countries -->
+    {allCountries.map(([code, d]) => {
+      const hasArticles = activeCodes.has(code);
+      if (hasArticles) {
+        return (
+          <a href={`${import.meta.env.BASE_URL}country/${code}`} class="map-country active">
+            <title>{code} — click to view articles</title>
+            <path
+              d={d}
+              fill="var(--color-accent)"
+              opacity="0.7"
+              stroke="var(--color-accent)"
+              stroke-width="0.8"
+              stroke-linejoin="round"
+              class="transition-all duration-200"
+            />
+          </a>
+        );
+      }
       return (
-        <a href={hasArticles ? `${import.meta.env.BASE_URL}country/${c.code}` : undefined} class:list={['map-country', { active: hasArticles, inactive: !hasArticles }]}>
-          <title>{c.name}{hasArticles ? ' — click to view articles' : ''}</title>
-          <path
-            d={c.d}
-            fill={hasArticles ? 'var(--color-accent)' : 'var(--color-border)'}
-            opacity={hasArticles ? '0.65' : '0.3'}
-            stroke={hasArticles ? 'var(--color-accent)' : 'var(--color-muted)'}
-            stroke-width={hasArticles ? '1' : '0.5'}
-            stroke-linejoin="round"
-            class="transition-all duration-200"
-          />
-          {/* Country code label */}
-          {(() => {
-            // Calculate centroid from path bounding box
-            const nums = c.d.match(/\d+(\.\d+)?/g)?.map(Number) ?? [];
-            let sumX = 0, sumY = 0, count = 0;
-            for (let i = 0; i < nums.length; i += 2) {
-              sumX += nums[i]; sumY += nums[i + 1]; count++;
-            }
-            const cx = sumX / count;
-            const cy = sumY / count;
-            const size = count < 6 ? 8 : 10;
-            return (
-              <text
-                x={cx}
-                y={cy + 1}
-                text-anchor="middle"
-                dominant-baseline="central"
-                font-size={size}
-                font-weight={hasArticles ? '600' : '400'}
-                fill={hasArticles ? 'white' : 'var(--color-muted)'}
-                opacity={hasArticles ? '1' : '0.5'}
-                class="pointer-events-none select-none"
-                style="font-family: var(--font-ui)"
-              >
-                {c.code}
-              </text>
-            );
-          })()}
-        </a>
+        <path
+          d={d}
+          fill="var(--color-border)"
+          opacity="0.35"
+          stroke="var(--color-muted)"
+          stroke-width="0.3"
+          stroke-linejoin="round"
+        />
       );
     })}
   </svg>
@@ -141,18 +67,11 @@ const countries: { code: string; name: string; d: string }[] = [
     cursor: pointer;
   }
   .map-country.active:hover path {
-    opacity: 0.9 !important;
+    opacity: 0.95 !important;
     fill: var(--color-accent);
     stroke: var(--color-accent);
-    stroke-width: 2;
-    filter: drop-shadow(0 0 6px var(--color-accent));
-  }
-  .map-country.active:hover text {
-    fill: white;
-    font-weight: 700;
-  }
-  .map-country.inactive {
-    pointer-events: none;
+    stroke-width: 1.5;
+    filter: drop-shadow(0 0 4px var(--color-accent));
   }
   .map-country.active:focus-visible path {
     outline: 2px solid var(--color-accent);

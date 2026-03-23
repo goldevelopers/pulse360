@@ -18,6 +18,8 @@
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.7",
     "fuse.js": "^7.1.0",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   }
 }

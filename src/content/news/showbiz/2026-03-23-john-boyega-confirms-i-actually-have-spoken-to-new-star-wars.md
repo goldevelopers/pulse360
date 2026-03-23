@@ -3,7 +3,7 @@ category: Showbiz
 description: John Boyega confirmed to &#8220;Star Wars&#8221; fans at Megacon Orlando
   (via ScreenRant) that he&#8217;s spoken to new Lucasfilm boss Dave Filoni, who is
   now the studio&#8217;s…
-displayOrder: 6
+displayOrder: 11
 heroImage: ''
 importance: 71.8
 pubDate: '2026-03-23T15:36:58Z'

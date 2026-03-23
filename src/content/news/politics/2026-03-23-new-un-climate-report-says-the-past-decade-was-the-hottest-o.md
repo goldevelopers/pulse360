@@ -1,7 +1,7 @@
 ---
 category: Politics
 description: A new UN report confirms the past decade was the hottest on record.
-displayOrder: 20
+displayOrder: 26
 heroImage: ''
 importance: 67.5
 pubDate: '2026-03-23T12:24:41Z'

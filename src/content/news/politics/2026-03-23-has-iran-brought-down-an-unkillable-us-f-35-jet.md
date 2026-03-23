@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: The supersonic fighter jet is designed to avoid detection by radar and
   other technologies.
-displayOrder: 33
+displayOrder: 999
 heroImage: ''
 importance: 60.5
 pubDate: '2026-03-23T11:18:10Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: The senators called for a full review of investments from Middle Eastern
   sovereign wealth funds and Tencent, which they say could influence editorial decisions
   at news outlets…
-displayOrder: 5
+displayOrder: 8
 heroImage: ''
 importance: 64.8
 pubDate: '2026-03-23T18:37:27Z'

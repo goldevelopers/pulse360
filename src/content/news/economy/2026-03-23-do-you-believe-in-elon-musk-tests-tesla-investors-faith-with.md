@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: The Terafab, a planned venture between SpaceX and Tesla, could cost trillions
   of dollars, according to analysts.
-displayOrder: 50
+displayOrder: 999
 heroImage: ''
 importance: 33.5
 pubDate: '2026-03-23T18:12:00Z'

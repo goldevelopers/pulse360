@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: It’s estimated that around 90% of Kalshi’s prediction-market fees revenue
   has been tied to sports in recent months.
-displayOrder: 49
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-23T19:01:00Z'

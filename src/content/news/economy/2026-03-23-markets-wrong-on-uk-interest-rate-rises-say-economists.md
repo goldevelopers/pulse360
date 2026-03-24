@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Forecasters argue a weak economy will prevent the energy shock fuelling
   persistent inflation
-displayOrder: 50
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-23T18:37:28Z'

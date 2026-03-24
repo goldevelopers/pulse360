@@ -4,7 +4,7 @@ country: Israel
 countryCode: IL
 description: UN Special Rapporteur Francesca Albanese says torture &#039;has effectively
   become state policy&#039; in Israel.
-displayOrder: 7
+displayOrder: 13
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-23T22:58:33Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Thousands of Brent and WTI contracts changed hands 15 minutes before
   president’s message on Truth Social
-displayOrder: 37
+displayOrder: 39
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-23T21:35:08Z'

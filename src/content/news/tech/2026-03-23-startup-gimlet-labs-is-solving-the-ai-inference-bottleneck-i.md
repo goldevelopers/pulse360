@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Gimlet Labs just raised an $80 million Series A for tech that lets AI
   run across NVIDIA, AMD, Intel, ARM, Cerebras and d-Matrix chips, simultaneously.
-displayOrder: 42
+displayOrder: 999
 heroImage: ''
 importance: 54.0
 pubDate: '2026-03-23T16:00:00Z'

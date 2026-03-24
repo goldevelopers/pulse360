@@ -4,7 +4,7 @@ country: Lebanon
 countryCode: LB
 description: Lebanon fears that Israel’s attack on Qasmiyeh Bridge could be a “prelude
   to a ground invasion”.
-displayOrder: 23
+displayOrder: 999
 heroImage: ''
 importance: 67.5
 pubDate: '2026-03-23T16:01:08Z'

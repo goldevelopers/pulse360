@@ -2,7 +2,7 @@
 category: Politics
 description: Rerouting and diversification cannot help when a significant chunk of
   oil and gas have been taken off the market.
-displayOrder: 19
+displayOrder: 26
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-23T18:06:18Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: FX is filling out the cast of &#8220;Shōgun,&#8221; with Risei Kukihara,
   Ryô Satô, Seishiro Nishida, Mantaro Koichi and Takashi Yamaguchi joining Season
   2 of the historical drama…
-displayOrder: 4
+displayOrder: 12
 heroImage: ''
 importance: 58.8
 pubDate: '2026-03-23T23:00:00Z'

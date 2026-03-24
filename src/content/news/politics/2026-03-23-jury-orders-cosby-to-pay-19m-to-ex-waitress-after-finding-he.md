@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Donna Motsinger alleged Cosby gave her wine and a pill that left her
   incapacitated after picking her up in a limousine in 1972.
-displayOrder: 25
+displayOrder: 31
 heroImage: ''
 importance: 49.2
 pubDate: '2026-03-23T22:18:27Z'

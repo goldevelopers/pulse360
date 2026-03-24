@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Investor uncertainty intensifies as AI impacts on the enterprise software
   industry emerge
-displayOrder: 27
+displayOrder: 36
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-23T21:04:55Z'

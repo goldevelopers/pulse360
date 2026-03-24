@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Memes didn’t just make Chuck Norris funny — they made him an icon, revived
   his career and may keep paying dividends for decades to come.
-displayOrder: 43
+displayOrder: 48
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-23T22:04:00Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: Ronnie Bowman, a preeminent bluegrass singer who was also renowned for
   co-writing songs recorded by top country stars like Chris Stapleton, Kenny Chesney
   and George Strait, died…
-displayOrder: 14
+displayOrder: 999
 heroImage: ''
 importance: 62.8
 pubDate: '2026-03-23T21:02:16Z'

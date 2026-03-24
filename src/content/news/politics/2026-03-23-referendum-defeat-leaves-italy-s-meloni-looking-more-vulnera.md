@@ -4,7 +4,7 @@ country: Italy
 countryCode: IT
 description: Meloni vowed to press on after losing a vote on constitutional reform
   many turned into a referendum on her government.
-displayOrder: 33
+displayOrder: 999
 heroImage: ''
 importance: 52.2
 pubDate: '2026-03-23T20:25:32Z'

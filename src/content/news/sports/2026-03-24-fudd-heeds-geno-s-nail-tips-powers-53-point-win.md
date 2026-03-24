@@ -5,7 +5,7 @@ countryCode: US
 description: Azzi Fudd scored 26 of her 34 points in the first half in her final game
   at Gampel Pavilion and UConn used a 31-0 run to roll to a 98-45 win over Syracuse
   on Monday night to…
-displayOrder: 3
+displayOrder: 5
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-24T05:34:53Z'

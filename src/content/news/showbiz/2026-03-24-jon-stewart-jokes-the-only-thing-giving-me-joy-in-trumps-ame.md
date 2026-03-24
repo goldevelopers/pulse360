@@ -5,7 +5,7 @@ countryCode: US
 description: On this week&#8217;s episode of “The Daily Show,” Jon Stewart poked fun
   at ABC pulling the latest season of “The Bachelorette” from its schedule amid the
   explosive fallout between…
-displayOrder: 1
+displayOrder: 4
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-24T04:28:17Z'

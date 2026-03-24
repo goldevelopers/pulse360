@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: WWDC is often light on hardware, but it's where big software announcements
   happen.
-displayOrder: 35
+displayOrder: 999
 heroImage: ''
 importance: 56.0
 pubDate: '2026-03-23T18:34:59Z'

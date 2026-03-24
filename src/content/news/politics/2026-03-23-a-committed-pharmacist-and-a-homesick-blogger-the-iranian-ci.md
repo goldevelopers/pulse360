@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: The toll on civilians is mounting fast as the US-Israeli war on Iran
   continues.
-displayOrder: 28
+displayOrder: 999
 heroImage: ''
 importance: 61.2
 pubDate: '2026-03-23T18:31:26Z'

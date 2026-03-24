@@ -5,7 +5,7 @@ countryCode: US
 description: In the aftermath of the collision of Air Canada flight AC8646 with a
   fire truck in New York, US transportation chief Sean Duffy emphasized that seat
   belts helped save lives
-displayOrder: 9
+displayOrder: 19
 heroImage: ''
 importance: 69.2
 pubDate: '2026-03-23T21:13:47Z'

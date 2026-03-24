@@ -5,7 +5,7 @@ countryCode: US
 description: Syracuse coach Felisha Legette-Jack blasted the NCAA women's basketball
   committee for consistently putting her teams in the UConn subregional in Storrs
   following the Orange's…
-displayOrder: 7
+displayOrder: 11
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-24T05:34:53Z'

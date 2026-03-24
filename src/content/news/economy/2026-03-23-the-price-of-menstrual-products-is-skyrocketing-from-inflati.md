@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: With rising inflation and changing tariff policies, menstrual products
   have seen a drastic rise in price over the past few years.
-displayOrder: 49
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-23T20:11:16Z'

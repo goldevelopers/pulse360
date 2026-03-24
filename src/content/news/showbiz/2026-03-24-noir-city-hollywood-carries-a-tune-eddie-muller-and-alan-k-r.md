@@ -5,7 +5,7 @@ countryCode: US
 description: For 28 years, the Noir City film festival has been unfolding every spring
   under the aegis of the American Cinematheque, give or take a couple of early name
   changes since it began…
-displayOrder: 8
+displayOrder: 999
 heroImage: ''
 importance: 54.8
 pubDate: '2026-03-24T02:48:39Z'

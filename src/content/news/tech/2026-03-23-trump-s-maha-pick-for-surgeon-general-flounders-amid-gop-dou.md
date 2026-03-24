@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: She stalled over MAHA woo-woo, anti-vaccine views, and lacking medical
   background.
-displayOrder: 32
+displayOrder: 999
 heroImage: ''
 importance: 56.0
 pubDate: '2026-03-23T21:43:21Z'

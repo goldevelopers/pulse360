@@ -3,7 +3,7 @@ category: Politics
 country: Israel
 countryCode: IL
 description: Israeli settlers have been filmed vandalising a boys’ school in Huwara.
-displayOrder: 23
+displayOrder: 43
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-24T00:14:00Z'

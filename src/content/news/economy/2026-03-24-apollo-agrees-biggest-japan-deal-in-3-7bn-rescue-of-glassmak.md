@@ -4,7 +4,7 @@ country: Japan
 countryCode: JP
 description: Japanese manufacturer has struggled since swooping for UK rival Pilkington
   two decades ago
-displayOrder: 42
+displayOrder: 50
 heroImage: ''
 importance: 29.5
 pubDate: '2026-03-24T06:12:45Z'

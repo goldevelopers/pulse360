@@ -5,7 +5,7 @@ countryCode: US
 description: 'R3 Bio has a bold idea for replacing lab animals: genetically-engineered
   whole organ systems that lack a brain. The long-term goal, says a cofounder, is
   to make human versions.'
-displayOrder: 37
+displayOrder: 999
 heroImage: ''
 importance: 58.2
 pubDate: '2026-03-23T19:46:05Z'

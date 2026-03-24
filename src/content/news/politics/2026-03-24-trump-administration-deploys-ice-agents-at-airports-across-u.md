@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: The Trump administration has deployed ICE agents to airports across the
   United States.
-displayOrder: 8
+displayOrder: 24
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-24T04:47:25Z'

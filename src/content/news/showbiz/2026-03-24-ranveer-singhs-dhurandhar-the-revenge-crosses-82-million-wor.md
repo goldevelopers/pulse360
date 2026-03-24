@@ -5,7 +5,7 @@ countryCode: IN
 description: 'Jio Studios and B62 Studios&#8217; &#8220;Dhurandhar: The Revenge&#8221;
   has delivered an unprecedented opening weekend, grossing INR761 crores ($82.4 million)
   worldwide and…'
-displayOrder: 3
+displayOrder: 15
 heroImage: ''
 importance: 58.8
 pubDate: '2026-03-24T06:40:27Z'

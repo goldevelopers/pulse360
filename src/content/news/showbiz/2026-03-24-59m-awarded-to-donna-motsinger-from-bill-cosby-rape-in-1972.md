@@ -5,7 +5,7 @@ countryCode: US
 description: 'UPDATE: A California jury has ordered Bill Cosby has to pay a total
   $59.25 million to a woman he drugged and raped in 1972. The massive amount was reached
   following an afternoon…'
-displayOrder: 10
+displayOrder: 999
 heroImage: ''
 importance: 67.0
 pubDate: '2026-03-24T01:08:00Z'

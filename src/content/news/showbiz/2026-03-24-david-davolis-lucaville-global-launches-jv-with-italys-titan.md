@@ -5,7 +5,7 @@ countryCode: IT
 description: 'EXCLUSIVE: Lucaville Global, the nascent outfit run by former Anonymous
   Content international boss David Davoli, has launched a JV with Italian indie Titanus
   Production and is…'
-displayOrder: 9
+displayOrder: 999
 heroImage: ''
 importance: 50.0
 pubDate: '2026-03-24T08:00:00Z'

@@ -5,7 +5,7 @@ countryCode: CH
 description: Munich-based Autentic has nabbed international rights to the award-winning
   Swiss docuseries “Game Over – The Fall of Credit Suisse,” Simon Helbling’s chronicle
   of the once mighty…
-displayOrder: 2
+displayOrder: 14
 heroImage: ''
 importance: 57.8
 pubDate: '2026-03-24T07:21:03Z'

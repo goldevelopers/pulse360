@@ -2,7 +2,7 @@
 category: Tech
 description: Upgrade your setup with Sony’s newest releases. Save on industry-leading
   noise-canceling audio, and pro-level Alpha cameras.
-displayOrder: 17
+displayOrder: 36
 heroImage: ''
 importance: 48.2
 pubDate: '2026-03-24T05:00:00Z'

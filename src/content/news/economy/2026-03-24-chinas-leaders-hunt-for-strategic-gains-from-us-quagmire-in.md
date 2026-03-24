@@ -4,7 +4,7 @@ country: China
 countryCode: CN
 description: Beijing hopes Washington’s redeployment of forces from Asia will further
   tip regional balance of power
-displayOrder: 35
+displayOrder: 47
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-24T03:41:46Z'

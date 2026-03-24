@@ -4,7 +4,7 @@ country: France
 countryCode: FR
 description: France’s president Emmanuel Macron said Lebanon’s fight against threats
   to its security is ‘just’.
-displayOrder: 30
+displayOrder: 999
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-23T22:59:25Z'

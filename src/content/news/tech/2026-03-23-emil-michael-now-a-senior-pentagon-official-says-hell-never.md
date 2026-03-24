@@ -5,7 +5,7 @@ countryCode: US
 description: When asked whether he was still "salty" about about being shown the door
   at Uber, alongside co-founder Travis Kalanick, Michael didn't equivocate. "I'll
   never forget that, nor…
-displayOrder: 14
+displayOrder: 35
 heroImage: ''
 importance: 67.0
 pubDate: '2026-03-23T23:49:10Z'

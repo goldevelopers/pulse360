@@ -3,7 +3,7 @@ category: Economy
 country: United Kingdom
 countryCode: GB
 description: UK fintech benefited from growing market share and fees from card payments
-displayOrder: 20
+displayOrder: 38
 heroImage: ''
 importance: 40.5
 pubDate: '2026-03-24T07:29:48Z'

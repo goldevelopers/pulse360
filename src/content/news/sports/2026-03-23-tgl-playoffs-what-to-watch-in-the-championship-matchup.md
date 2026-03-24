@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Who will take home the SoFi Cup in Year 2? It's Los Angeles Golf Club
   vs. Jupiter Links GC for the title.
-displayOrder: 27
+displayOrder: 999
 heroImage: ''
 importance: 54.5
 pubDate: '2026-03-23T23:10:58Z'

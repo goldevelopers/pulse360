@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Immigration and Customs Enforcement (ICE) officers were reportedly sent
   to 14 airports, including New York’s JFK.
-displayOrder: 15
+displayOrder: 32
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-24T06:58:30Z'

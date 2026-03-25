@@ -2,7 +2,7 @@
 category: Politics
 description: Energy facilities in the Middle East are under attack, including Qatar&#039;s
   LNG, pushing prices higher.
-displayOrder: 5
+displayOrder: 15
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-25T14:15:00Z'

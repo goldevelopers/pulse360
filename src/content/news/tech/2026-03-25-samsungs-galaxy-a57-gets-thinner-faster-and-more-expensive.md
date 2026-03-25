@@ -5,7 +5,7 @@ countryCode: KR
 description: Samsung has announced its two newest midrange phones, the Galaxy A57
   and A37. Both phones benefit from a jump to IP68 water-resistance and some improved
   AI features, but the…
-displayOrder: 21
+displayOrder: 999
 heroImage: ''
 importance: 55.2
 pubDate: '2026-03-25T12:00:00Z'

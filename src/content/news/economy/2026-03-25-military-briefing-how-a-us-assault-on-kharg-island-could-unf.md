@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Seizing Iran’s oil export hub by sea or air would choke regime but risks
   dragging American troops into open-ended conflict
-displayOrder: 33
+displayOrder: 45
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-25T13:00:03Z'

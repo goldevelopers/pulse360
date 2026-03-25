@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Investors concerned about Big Tech’s massive AI capital expenditures
   may be drawn to lush capital returns within the energy sector.
-displayOrder: 30
+displayOrder: 41
 heroImage: ''
 importance: 40.5
 pubDate: '2026-03-25T16:12:00Z'

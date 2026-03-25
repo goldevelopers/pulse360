@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Met hails significant breakthrough in investigation into antisemitic
   attack
-displayOrder: 39
+displayOrder: 49
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-25T09:38:22Z'

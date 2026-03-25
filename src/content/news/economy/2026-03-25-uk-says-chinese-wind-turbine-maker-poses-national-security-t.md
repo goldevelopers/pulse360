@@ -3,7 +3,7 @@ category: Economy
 country: United Kingdom
 countryCode: GB
 description: Ming Yang’s plans to build Scottish factory thwarted
-displayOrder: 37
+displayOrder: 47
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-25T14:38:26Z'

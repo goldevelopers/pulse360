@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Glimpse announced on Wednesday a $35 million Series A led by Andreessen
   Horowitz, with participation from 8VC and YC.
-displayOrder: 9
+displayOrder: 21
 heroImage: ''
 importance: 64.0
 pubDate: '2026-03-25T13:00:00Z'

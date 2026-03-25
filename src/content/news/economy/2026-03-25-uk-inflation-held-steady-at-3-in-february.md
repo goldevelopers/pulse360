@@ -3,7 +3,7 @@ category: Economy
 country: United Kingdom
 countryCode: GB
 description: Figure comes as Middle East war has triggered a surge in energy prices
-displayOrder: 38
+displayOrder: 999
 heroImage: ''
 importance: 52.5
 pubDate: '2026-03-25T07:53:48Z'

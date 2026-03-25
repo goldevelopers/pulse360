@@ -3,7 +3,7 @@ category: Tech
 country: United States
 countryCode: US
 description: Sift is building the data infrastructure for advanced manufacturing.
-displayOrder: 12
+displayOrder: 999
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-25T13:00:00Z'

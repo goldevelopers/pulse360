@@ -3,7 +3,7 @@ category: Showbiz
 description: Hong Kong-based Act3 and Manila-based BlackOps Studios Asia have unveiled
   &#8220;A Thread of Steel,&#8221; a historical action drama, as the first major co-production
   under a…
-displayOrder: 7
+displayOrder: 11
 heroImage: ''
 importance: 57.8
 pubDate: '2026-03-26T00:00:00Z'

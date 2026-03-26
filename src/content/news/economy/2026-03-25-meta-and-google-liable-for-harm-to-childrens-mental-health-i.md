@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Jury awards at least $3mn in damages with Instagram owner to pay the
   majority
-displayOrder: 33
+displayOrder: 40
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-25T22:05:57Z'

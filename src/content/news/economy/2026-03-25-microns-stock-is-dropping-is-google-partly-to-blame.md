@@ -5,7 +5,7 @@ countryCode: US
 description: Google introduced an algorithm that it says improves memory usage in
   AI models. Whether that will actually eat into business for Micron and rivals is
   unclear.
-displayOrder: 41
+displayOrder: 47
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-25T19:00:00Z'

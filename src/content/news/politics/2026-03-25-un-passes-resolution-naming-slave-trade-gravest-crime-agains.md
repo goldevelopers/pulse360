@@ -2,7 +2,7 @@
 category: Politics
 description: Resolution on transatlantic slavery supported by 123 countries, while
   three opposed it - including the US and Israel.
-displayOrder: 22
+displayOrder: 28
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-25T18:55:28Z'

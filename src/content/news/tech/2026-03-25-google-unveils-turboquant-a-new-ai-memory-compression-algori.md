@@ -5,7 +5,7 @@ countryCode: US
 description: Google’s TurboQuant has the internet joking about Pied Piper from HBO's
   "Silicon Valley." The compression algorithm promises to shrink AI’s “working memory”
   by up to 6x, but it’s…
-displayOrder: 19
+displayOrder: 24
 heroImage: ''
 importance: 54.0
 pubDate: '2026-03-25T20:38:45Z'

@@ -4,7 +4,7 @@ country: Israel
 countryCode: IL
 description: A Palestinian teenager was starved in an Israeli prison before his death,
   a judge ruled before closing the case.
-displayOrder: 32
+displayOrder: 38
 heroImage: ''
 importance: 40.0
 pubDate: '2026-03-25T22:06:00Z'

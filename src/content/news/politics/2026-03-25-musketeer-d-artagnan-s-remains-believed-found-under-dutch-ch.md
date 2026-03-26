@@ -4,7 +4,7 @@ country: Netherlands
 countryCode: NL
 description: D'Artagnan was killed during the Siege of Maastricht in 1673 and later
   immortalised in the stories of Alexandre Dumas.
-displayOrder: 31
+displayOrder: 999
 heroImage: ''
 importance: 59.2
 pubDate: '2026-03-25T14:30:39Z'

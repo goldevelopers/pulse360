@@ -5,7 +5,7 @@ countryCode: US
 description: The jury in a landmark trial testing claims about social media addiction
   against Meta's Instagram and Google's YouTube determined that the two companies
   failed to warn users about…
-displayOrder: 16
+displayOrder: 25
 heroImage: ''
 importance: 62.2
 pubDate: '2026-03-25T18:08:14Z'

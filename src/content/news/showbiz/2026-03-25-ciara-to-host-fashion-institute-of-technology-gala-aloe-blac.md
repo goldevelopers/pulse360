@@ -5,7 +5,7 @@ countryCode: US
 description: The Grammy Award winner will front the festivities at New York’s historic
   Cathedral of St. John the Divine on April 14. As previously announced, Gap president
   and CEO Richard…
-displayOrder: 3
+displayOrder: 9
 heroImage: ''
 importance: 78.8
 pubDate: '2026-03-25T18:27:59Z'

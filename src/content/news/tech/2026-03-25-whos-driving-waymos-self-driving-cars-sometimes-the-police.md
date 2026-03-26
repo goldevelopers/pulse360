@@ -5,7 +5,7 @@ countryCode: US
 description: First responders have had to take control of Waymo vehicles and move
   them during emergency situations, including in at least two active crime scenes,
   TechCrunch found.
-displayOrder: 10
+displayOrder: 17
 heroImage: ''
 importance: 64.0
 pubDate: '2026-03-25T20:57:21Z'

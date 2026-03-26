@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Analysts see ways that Microsoft could ultimately improve trends in its
   cloud and software businesses, but they may take some time to manifest.
-displayOrder: 43
+displayOrder: 46
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-25T21:00:00Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: 'The official “World of Warcraft” concert series is going on tour, Swiss
   concert production company Helvepic announced Tuesday. An immersive live concert,
   “World of Warcraft: 20…'
-displayOrder: 12
+displayOrder: 999
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-25T20:05:57Z'

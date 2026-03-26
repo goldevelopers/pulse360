@@ -5,7 +5,7 @@ countryCode: US
 description: Amid speculation he could be a candidate for the vacancy at North Carolina,
   Arizona coach Tommy Lloyd insisted all his attention is with his program ahead of
   Thursday's Sweet 16…
-displayOrder: 5
+displayOrder: 23
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-26T07:55:26Z'

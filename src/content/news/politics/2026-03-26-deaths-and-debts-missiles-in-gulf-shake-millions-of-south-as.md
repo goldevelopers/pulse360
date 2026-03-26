@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: Most people killed in Iran&#039;s Gulf attacks have been from South Asia.
   And entire economies back home are on edge.
-displayOrder: 20
+displayOrder: 42
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-26T06:26:10Z'

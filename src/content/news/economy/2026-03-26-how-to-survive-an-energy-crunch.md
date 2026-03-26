@@ -1,7 +1,7 @@
 ---
 category: Economy
 description: Have you considered simply doing less?
-displayOrder: 31
+displayOrder: 45
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-26T05:00:21Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: US president appears to make abrupt policy pivots based on swings in
   crude prices
-displayOrder: 27
+displayOrder: 44
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-26T05:00:32Z'

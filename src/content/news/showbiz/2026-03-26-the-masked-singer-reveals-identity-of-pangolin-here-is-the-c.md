@@ -5,7 +5,7 @@ countryCode: US
 description: 'SPOILER ALERT: Details follow for Season 14, Episode 11 &#160;of “The
   Masked Singer,” “Semi-Finals,” which aired March 25 on Fox. There was no more fight
   left in Rachel Platten.…'
-displayOrder: 26
+displayOrder: 999
 heroImage: ''
 importance: 52.8
 pubDate: '2026-03-26T01:00:00Z'

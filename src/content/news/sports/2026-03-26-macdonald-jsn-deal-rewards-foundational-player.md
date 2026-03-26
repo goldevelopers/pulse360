@@ -5,7 +5,7 @@ countryCode: US
 description: Seahawks GM John Schneider and coach Mike Macdonald said they felt comfortable
   giving Jaxon Smith-Njigba his record-setting extension because of his "unique combination"
   of…
-displayOrder: 7
+displayOrder: 33
 heroImage: ''
 importance: 67.5
 pubDate: '2026-03-26T00:40:32Z'

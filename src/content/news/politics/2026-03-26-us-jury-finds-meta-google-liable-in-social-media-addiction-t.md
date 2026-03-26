@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: A Los Angeles jury has found Alphabet&#039;s Google and Meta liable for
   $6 million in a landmark social media addiction case.
-displayOrder: 16
+displayOrder: 40
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-26T03:19:56Z'

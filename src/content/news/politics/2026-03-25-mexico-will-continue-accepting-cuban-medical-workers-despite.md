@@ -4,7 +4,7 @@ country: Mexico
 countryCode: MX
 description: Mexican President Claudia Sheinbaum praises services from Cuban doctors,
   who often work in underserved rural areas.
-displayOrder: 6
+displayOrder: 38
 heroImage: ''
 importance: 77.5
 pubDate: '2026-03-25T22:28:38Z'

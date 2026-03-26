@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Restaurant analyst says the tie-in with the Netflix film will be a huge
   hit for the Golden Arches
-displayOrder: 50
+displayOrder: 999
 heroImage: ''
 importance: 35.5
 pubDate: '2026-03-25T22:46:00Z'

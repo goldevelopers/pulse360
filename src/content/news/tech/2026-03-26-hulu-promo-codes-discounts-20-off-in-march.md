@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Students can get a Hulu plan for $1.99 per month. Get more details on
   this and other great deals below.
-displayOrder: 12
+displayOrder: 34
 heroImage: ''
 importance: 52.2
 pubDate: '2026-03-26T05:00:00Z'

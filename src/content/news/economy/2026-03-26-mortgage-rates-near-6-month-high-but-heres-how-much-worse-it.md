@@ -5,7 +5,7 @@ countryCode: US
 description: The spike in U.S. mortgage rates since the Iran war began in late February
   has been dashing hopes for an affordability boost ahead of the spring home-buying
   season.
-displayOrder: 35
+displayOrder: 47
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-26T02:29:00Z'

@@ -4,7 +4,7 @@ country: Australia
 countryCode: AU
 description: Australia&#039;s Home Affairs Department said decision to ban Iranian
   visitors amid the war was in the &#039;national interest&#039;.
-displayOrder: 10
+displayOrder: 32
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-26T03:28:18Z'

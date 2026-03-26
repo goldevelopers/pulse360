@@ -2,7 +2,7 @@
 category: Tech
 description: Save up to 60%, plus an extra 20% with HP promo codes for laptops, printers,
   PCs, and more tech.
-displayOrder: 3
+displayOrder: 22
 heroImage: ''
 importance: 62.2
 pubDate: '2026-03-26T05:00:00Z'

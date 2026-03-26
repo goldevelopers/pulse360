@@ -5,7 +5,7 @@ countryCode: US
 description: Shares of the Fundrise Innovation Fund have surged as investors look
   to invest in private AI companies, but history suggests that these high valuations
   aren’t tenable.
-displayOrder: 43
+displayOrder: 999
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-25T22:11:00Z'

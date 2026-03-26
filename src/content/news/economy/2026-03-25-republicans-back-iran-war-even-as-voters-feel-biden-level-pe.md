@@ -3,7 +3,7 @@ category: Economy
 country: United States
 countryCode: US
 description: Lawmakers aim to reassure constituents that cost increases are temporary
-displayOrder: 47
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-25T21:48:42Z'

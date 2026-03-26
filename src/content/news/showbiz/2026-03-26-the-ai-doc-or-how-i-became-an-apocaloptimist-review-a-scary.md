@@ -3,7 +3,7 @@ category: Showbiz
 description: '"The AI Doc" has been structured as a ride into the future — a kaleidoscopic
   multimedia meditation on what AI is (the film explains it from the ground up), how
   intelligent it…'
-displayOrder: 25
+displayOrder: 999
 heroImage: ''
 importance: 48.8
 pubDate: '2026-03-26T03:04:29Z'

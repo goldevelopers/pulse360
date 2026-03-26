@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: London&#039;s Met Police had eased arrests following the High Court ruling
   that the ban on Palestine Action was unlawful.
-displayOrder: 1
+displayOrder: 13
 heroImage: ''
 importance: 65.5
 pubDate: '2026-03-26T06:47:41Z'

@@ -4,7 +4,7 @@ country: Ghana
 countryCode: GH
 description: The UN has adopted a Ghana-led resolution recognising transatlantic slavery
   as the “gravest crime against humanity”.
-displayOrder: 36
+displayOrder: 999
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-25T20:50:15Z'

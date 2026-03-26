@@ -5,7 +5,7 @@ countryCode: US
 description: In a letter sent Thursday morning, Elizabeth Warren and Josh Hawley press
   the Energy Information Agency to mandate annual electricity disclosure for data
   centers.
-displayOrder: 17
+displayOrder: 999
 heroImage: ''
 importance: 61.2
 pubDate: '2026-03-26T12:00:00Z'

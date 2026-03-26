@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: Defence minister claims Israel kills Alireza Tangsiri, citing his role
   in blocking the Strait of Hormuz.
-displayOrder: 37
+displayOrder: 999
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-26T11:10:39Z'

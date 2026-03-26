@@ -4,7 +4,7 @@ country: Philippines
 countryCode: PH
 description: BBC News Asia Business Correspondent Suranajana Tewari spoke to people
   taking to the streets of Manila.
-displayOrder: 47
+displayOrder: 999
 heroImage: ''
 importance: 55.2
 pubDate: '2026-03-26T05:13:46Z'

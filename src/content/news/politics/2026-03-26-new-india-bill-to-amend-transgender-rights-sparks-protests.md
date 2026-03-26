@@ -4,7 +4,7 @@ country: India
 countryCode: IN
 description: The bill seeks to change how transgender people are legally recognised
   and their right to self-identify.
-displayOrder: 43
+displayOrder: 999
 heroImage: ''
 importance: 49.2
 pubDate: '2026-03-26T09:01:03Z'

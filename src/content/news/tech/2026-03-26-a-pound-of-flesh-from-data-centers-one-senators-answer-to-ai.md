@@ -5,7 +5,7 @@ countryCode: US
 description: Fears of AI-driven job loss are growing fast, and they’re fueling backlash
   against data centers. Sen. Mark Warner suggests taxing them to help workers survive
   the transition.
-displayOrder: 3
+displayOrder: 11
 heroImage: ''
 importance: 77.0
 pubDate: '2026-03-26T12:00:00Z'

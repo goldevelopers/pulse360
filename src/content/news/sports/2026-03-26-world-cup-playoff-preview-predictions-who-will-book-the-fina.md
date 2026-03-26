@@ -2,7 +2,7 @@
 category: Sports
 description: The final six spots -- four from Europe and two from the intercontinental
   playoff -- will be clinched this week.
-displayOrder: 18
+displayOrder: 27
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-26T13:08:10Z'

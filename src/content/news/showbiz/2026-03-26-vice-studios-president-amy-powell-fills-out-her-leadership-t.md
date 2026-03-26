@@ -5,7 +5,7 @@ countryCode: US
 description: 'Vice Studios president Amy Powell has announced her executive team:
   Adam Kassan has been named executive VP, scripted film and television; Cat Lawson
   is exec VP of unscripted;…'
-displayOrder: 6
+displayOrder: 999
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-26T16:00:00Z'

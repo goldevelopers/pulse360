@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: “The ‘price of justice’ is a barrier that many women simply cannot afford,”
   Kardashian wrote in a post.
-displayOrder: 5
+displayOrder: 15
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-26T16:00:51Z'

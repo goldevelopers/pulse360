@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Rates had fallen under 6% for the first time since 2022 just days before
   the start of Operation Epic Fury.
-displayOrder: 29
+displayOrder: 39
 heroImage: ''
 importance: 42.5
 pubDate: '2026-03-26T16:11:00Z'

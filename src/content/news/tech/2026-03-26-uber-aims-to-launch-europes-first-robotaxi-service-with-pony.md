@@ -5,7 +5,7 @@ countryCode: HR
 description: Uber is joining forces with two companies, China's Pony AI and Croatia's
   Verne, to launch what it claims will be Europe's first commercially available robotaxi
   service. The…
-displayOrder: 36
+displayOrder: 999
 heroImage: ''
 importance: 55.2
 pubDate: '2026-03-26T08:15:00Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: The inaugural event, launched by onetime Uber engineer turned Soulscape
   founder Zhang, is set to take place at San Francisco’s KQED headquarters on April
   10-12.
-displayOrder: 7
+displayOrder: 999
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-26T16:00:00Z'

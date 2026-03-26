@@ -5,7 +5,7 @@ countryCode: SE
 description: Shares in Swedish-headquartered retailer H&amp;M fell as much as 7% on
   Thursday after the group said it expects to lose more profit to markdowns in the
   current quarter.
-displayOrder: 20
+displayOrder: 33
 heroImage: ''
 importance: 56.5
 pubDate: '2026-03-26T11:53:00Z'

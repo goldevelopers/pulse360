@@ -4,7 +4,7 @@ country: Denmark
 countryCode: DK
 description: Mette Frederiksen could return for a third term as prime minister after
   tough coalition talks.
-displayOrder: 20
+displayOrder: 36
 heroImage: ''
 importance: 70.5
 pubDate: '2026-03-25T11:18:22Z'

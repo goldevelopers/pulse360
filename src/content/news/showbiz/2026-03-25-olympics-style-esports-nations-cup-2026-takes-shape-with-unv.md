@@ -5,7 +5,7 @@ countryCode: SA
 description: The Esports Foundation has unveiled the organizations and individuals
   awarded National Team Partner status for the inaugural Esports Nations Cup, which
   is due to take place in the…
-displayOrder: 13
+displayOrder: 999
 heroImage: ''
 importance: 65.0
 pubDate: '2026-03-25T15:00:00Z'

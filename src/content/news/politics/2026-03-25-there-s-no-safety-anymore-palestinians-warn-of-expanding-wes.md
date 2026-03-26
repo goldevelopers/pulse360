@@ -2,7 +2,7 @@
 category: Politics
 description: There has been a surge of attacks by Israeli settlers on Palestinian
   villages across the occupied territory since the start of the Iran war.
-displayOrder: 38
+displayOrder: 999
 heroImage: ''
 importance: 51.2
 pubDate: '2026-03-25T12:27:28Z'

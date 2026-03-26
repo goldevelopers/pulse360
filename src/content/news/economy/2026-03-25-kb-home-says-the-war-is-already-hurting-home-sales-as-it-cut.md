@@ -5,7 +5,7 @@ countryCode: US
 description: KB Home shares were under pressure on Wednesday after saying it’s already
   seeing prospective buyers deterred by the war as the Los Angeles home builder cut
   its full-year guidance.
-displayOrder: 40
+displayOrder: 999
 heroImage: ''
 importance: 52.5
 pubDate: '2026-03-25T11:34:00Z'

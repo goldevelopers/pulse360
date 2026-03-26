@@ -4,7 +4,7 @@ country: Spain
 countryCode: ES
 description: Pedro ​Sanchez has been one of the few leaders in Europe to condemn Israel&#039;s
   war in Lebanon, US-Israeli ⁠war on Iran.
-displayOrder: 34
+displayOrder: 999
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-25T11:02:40Z'

@@ -3,7 +3,7 @@ category: Tech
 description: Keychron makes some of the best mechanical keyboards available, whether
   you’re something of an enthusiast who intends to hotswap switches or someone who
   doesn’t want to pay a lot…
-displayOrder: 18
+displayOrder: 999
 heroImage: ''
 importance: 62.2
 pubDate: '2026-03-25T14:07:01Z'

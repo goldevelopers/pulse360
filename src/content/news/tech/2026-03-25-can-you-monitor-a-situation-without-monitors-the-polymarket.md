@@ -3,7 +3,7 @@ category: Tech
 description: Hello and welcome to Regulator, a newsletter for Verge readers who are
   political junkies, and Washington insiders hooked on technology. If this email has
   been forwarded to you but…
-displayOrder: 2
+displayOrder: 4
 heroImage: ''
 importance: 76.2
 pubDate: '2026-03-25T18:19:32Z'

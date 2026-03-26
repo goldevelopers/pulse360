@@ -5,7 +5,7 @@ countryCode: US
 description: Donald Trump appointed the first members to the President&#8217;s Council
   of Advisors on Science and Technology including, among others, Oracle co-founder
   Larry Ellison (father of…
-displayOrder: 7
+displayOrder: 999
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-25T19:22:24Z'

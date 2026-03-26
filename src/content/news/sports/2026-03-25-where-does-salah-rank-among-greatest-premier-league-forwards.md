@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: As Mohamed Salah announces he will leave Liverpool this summer, BBC Sport
   asks you to rank the best forwards in Premier League history.
-displayOrder: 50
+displayOrder: 999
 heroImage: ''
 importance: 54.2
 pubDate: '2026-03-25T06:30:23Z'

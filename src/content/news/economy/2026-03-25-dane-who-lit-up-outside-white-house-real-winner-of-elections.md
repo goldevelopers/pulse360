@@ -4,7 +4,7 @@ country: Denmark
 countryCode: DK
 description: Foreign minister Lars Løkke Rasmussen emerges as kingmaker in any potential
   coalition government
-displayOrder: 39
+displayOrder: 50
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-25T12:54:52Z'

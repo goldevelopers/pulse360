@@ -5,7 +5,7 @@ countryCode: US
 description: Following his recent cancer diagnosis, Bruce Campbell is committed to
   promoting his latest movie. The horror movie icon, who wrote, directed and stars
   in Ernie &#38; Emma,…
-displayOrder: 6
+displayOrder: 15
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-25T19:36:43Z'

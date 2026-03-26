@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: North Carolina men's basketball coach Hubert Davis was fired by the school
   after another early exit in the NCAA tournament.
-displayOrder: 25
+displayOrder: 37
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-25T16:54:31Z'

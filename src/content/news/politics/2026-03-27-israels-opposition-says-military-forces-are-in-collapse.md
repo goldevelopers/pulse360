@@ -4,7 +4,7 @@ country: Israel
 countryCode: IL
 description: Yair Lapid has criticises the government and says military forces are
   ‘in collapse.&#039;
-displayOrder: 19
+displayOrder: 999
 heroImage: ''
 importance: 50.5
 pubDate: '2026-03-27T07:34:24Z'

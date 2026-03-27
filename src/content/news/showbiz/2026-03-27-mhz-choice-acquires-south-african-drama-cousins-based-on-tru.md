@@ -5,7 +5,7 @@ countryCode: ZA
 description: 'EXCLUSIVE: MHz Choice will show acclaimed South African crime drama
   Cousins in North America. The streaming service will launch the Afrikaans-language
   series in August. The drama…'
-displayOrder: 7
+displayOrder: 24
 heroImage: ''
 importance: 57.0
 pubDate: '2026-03-27T11:00:20Z'

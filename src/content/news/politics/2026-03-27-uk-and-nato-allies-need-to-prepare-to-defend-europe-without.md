@@ -5,7 +5,7 @@ countryCode: GB
 description: The UK and its NATO allies in Europe must prepare for a "worst case scenario"
   of the US not defending them in a crisis, an influential committee of peers and
   MPs has warned.
-displayOrder: 30
+displayOrder: 999
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-27T01:40:00Z'

@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Populist party’s election campaign already hit by scandals around candidate
   selection
-displayOrder: 18
+displayOrder: 38
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-27T05:00:28Z'

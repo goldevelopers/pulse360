@@ -4,7 +4,7 @@ country: Italy
 countryCode: IT
 description: Competition regulator claims retailer and Benefit Cosmetics encourage
   purchases through ‘covert’ social media marketing
-displayOrder: 42
+displayOrder: 49
 heroImage: ''
 importance: 33.5
 pubDate: '2026-03-27T09:28:28Z'

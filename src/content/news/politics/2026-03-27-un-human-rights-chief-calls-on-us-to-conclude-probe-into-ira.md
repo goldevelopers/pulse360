@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: The strike - which killed at least 168 people, mostly children - "evoked
   a visceral horror", Volker Türk said.
-displayOrder: 1
+displayOrder: 7
 heroImage: ''
 importance: 66.2
 pubDate: '2026-03-27T12:06:18Z'

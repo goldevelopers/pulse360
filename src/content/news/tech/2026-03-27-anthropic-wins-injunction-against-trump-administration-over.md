@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: A federal judge has ordered that the Trump administration rescind recent
   restrictions it placed on the AI company.
-displayOrder: 43
+displayOrder: 999
 heroImage: ''
 importance: 50.0
 pubDate: '2026-03-27T01:18:38Z'

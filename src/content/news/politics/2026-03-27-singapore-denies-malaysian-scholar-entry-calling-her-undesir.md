@@ -4,7 +4,7 @@ country: Singapore
 countryCode: SG
 description: Fadiah Nadwa Fikri urged some in Singapore to "adopt her brand of radical
   advocacy", authorities say.
-displayOrder: 15
+displayOrder: 36
 heroImage: ''
 importance: 55.2
 pubDate: '2026-03-27T06:42:56Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: The economy is better suited to absorb higher energy costs, says Jim
   Paulsen.
-displayOrder: 28
+displayOrder: 41
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-27T10:48:00Z'

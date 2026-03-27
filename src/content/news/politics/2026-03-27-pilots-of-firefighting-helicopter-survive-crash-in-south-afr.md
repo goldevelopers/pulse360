@@ -4,7 +4,7 @@ country: South Africa
 countryCode: ZA
 description: Video shows the moment a firefighting helicopter lost control and crashed
   conducting water drops in South Africa.
-displayOrder: 5
+displayOrder: 23
 heroImage: ''
 importance: 56.5
 pubDate: '2026-03-27T11:42:46Z'

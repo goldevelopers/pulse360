@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Move would allow London mayor to take cabinet role, as prime minister
   tries to shore up position
-displayOrder: 46
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-27T05:00:17Z'

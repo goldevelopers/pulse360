@@ -5,7 +5,7 @@ countryCode: DE
 description: German filmmaker Alexander Kluge, who pioneered the 1960s New German
   Cinema movement and won the Venice Film Festival’s Golden Lion in 1968 with “The
   Artists in the Big Top:…
-displayOrder: 4
+displayOrder: 20
 heroImage: ''
 importance: 58.8
 pubDate: '2026-03-27T11:14:43Z'

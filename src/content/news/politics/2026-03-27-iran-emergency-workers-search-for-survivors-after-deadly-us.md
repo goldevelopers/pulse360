@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: Latest victims include six people killed in Qom as Iran announces grim
   milestone of nearly 2,000 war dead.
-displayOrder: 6
+displayOrder: 25
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-27T08:45:24Z'

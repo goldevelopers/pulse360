@@ -5,7 +5,7 @@ countryCode: US
 description: Arizona finally got over the Sweet 16 hurdle under coach Tommy Lloyd,
   getting 23 points from Brayden Burries and a dominant offensive effort in a 109-88
   win over Arkansas on…
-displayOrder: 21
+displayOrder: 40
 heroImage: ''
 importance: 50.5
 pubDate: '2026-03-27T06:55:33Z'

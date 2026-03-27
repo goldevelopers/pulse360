@@ -5,7 +5,7 @@ countryCode: US
 description: 'After Anthropic''s weeks-long standoff with the Pentagon, the company
   won one milestone: A judge granted Anthropic a preliminary injunction in its lawsuit,
   which sought to reverse…'
-displayOrder: 33
+displayOrder: 44
 heroImage: ''
 importance: 62.2
 pubDate: '2026-03-27T00:33:44Z'

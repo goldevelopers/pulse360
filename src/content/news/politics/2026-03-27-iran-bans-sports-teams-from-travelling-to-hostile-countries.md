@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: Sports Ministry says ban for &#039;security&#039; of athletes before
   a game between Iranian and Emirati clubs in Saudi Arabia.
-displayOrder: 11
+displayOrder: 31
 heroImage: ''
 importance: 59.5
 pubDate: '2026-03-27T07:25:59Z'

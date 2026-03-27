@@ -4,7 +4,7 @@ country: United Arab Emirates
 countryCode: AE
 description: Abu Dhabi is hardening its stance as it suffers from Iran’s retaliation
   to US-Israeli war
-displayOrder: 47
+displayOrder: 999
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-27T05:00:17Z'

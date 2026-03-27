@@ -5,7 +5,7 @@ countryCode: GB
 description: BBC Director General Tim Davie hasn&#8217;t quite left yet, but he already
   has his next role. Davie will become co-chair of the Creative Industries Council,
   replacing ex-ITV chair…
-displayOrder: 10
+displayOrder: 999
 heroImage: ''
 importance: 57.0
 pubDate: '2026-03-27T09:42:05Z'

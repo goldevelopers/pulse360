@@ -2,7 +2,7 @@
 category: Economy
 description: From Minnesota to Punjab, fertiliser costs are up and harvests are set
   to be hit
-displayOrder: 37
+displayOrder: 43
 heroImage: ''
 importance: 45.5
 pubDate: '2026-03-27T05:00:18Z'

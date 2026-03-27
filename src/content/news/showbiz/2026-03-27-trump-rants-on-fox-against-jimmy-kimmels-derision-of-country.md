@@ -5,7 +5,7 @@ countryCode: US
 description: Donald Trump&#8217;s effort today to praise his new Homeland Security
   Secretary and defend him from mocking by Jimmy Kimmel kind of backfired. &#8220;I
   never heard low-level…
-displayOrder: 18
+displayOrder: 26
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-27T00:02:25Z'

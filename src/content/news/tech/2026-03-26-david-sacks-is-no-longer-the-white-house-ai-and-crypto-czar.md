@@ -5,7 +5,7 @@ countryCode: US
 description: David Sacks, the venture capitalist and tech billionaire who'd become
   Silicon Valley's primary advocate inside the White House and a key architect of
   its aggressive AI policy…
-displayOrder: 6
+displayOrder: 16
 heroImage: ''
 importance: 66.2
 pubDate: '2026-03-26T23:40:22Z'

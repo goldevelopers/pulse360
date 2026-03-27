@@ -5,7 +5,7 @@ countryCode: GB
 description: The International Olympic Committee&#8217;s decision to ban transgender
   women from competing in women&#8217;s events at the Olympic games has found unsurprising
   support in…
-displayOrder: 3
+displayOrder: 9
 heroImage: ''
 importance: 69.8
 pubDate: '2026-03-26T23:49:21Z'

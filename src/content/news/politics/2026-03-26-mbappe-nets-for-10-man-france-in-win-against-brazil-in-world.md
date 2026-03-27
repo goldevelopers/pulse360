@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: France beat Brazil 2-1 in a friendly in United States, in what was a
   potential dress rehearsal for World Cup 2026 final.
-displayOrder: 4
+displayOrder: 12
 heroImage: ''
 importance: 71.5
 pubDate: '2026-03-26T22:37:20Z'

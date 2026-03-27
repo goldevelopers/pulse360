@@ -4,7 +4,7 @@ country: Djibouti
 countryCode: DJ
 description: Rescue operation recovers 266 survivors as UN warns deadliest season
   on the route is just beginning.
-displayOrder: 23
+displayOrder: 34
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-26T21:21:10Z'

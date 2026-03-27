@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: FX's anthology series from Ryan Murphy that follows the late '90s power
   couple wrapped up its nine-episode run with a tragic ending Thursday night.
-displayOrder: 2
+displayOrder: 7
 heroImage: ''
 importance: 62.8
 pubDate: '2026-03-27T02:15:34Z'

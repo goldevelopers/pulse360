@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Even as the Nasdaq slid into correction territory, shares of prominent
   software companies like Salesforce, CrowdStrike and Figma finished the session higher.
-displayOrder: 43
+displayOrder: 50
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-26T21:54:00Z'

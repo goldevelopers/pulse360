@@ -4,7 +4,7 @@ country: Israel
 countryCode: IL
 description: Prevailing view within IDF intelligence is that aerial campaign has yet
   to erode Islamic republic’s hold on power
-displayOrder: 48
+displayOrder: 999
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-26T21:00:03Z'

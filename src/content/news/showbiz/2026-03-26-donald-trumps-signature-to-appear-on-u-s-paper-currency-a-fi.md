@@ -5,7 +5,7 @@ countryCode: US
 description: Donald Trump&#8217;s name has been added to the U.S. Institute of Peace
   and to the Kennedy Center, among other things, so it perhaps is little surprise
   that it will soon be on…
-displayOrder: 17
+displayOrder: 999
 heroImage: ''
 importance: 63.0
 pubDate: '2026-03-26T23:00:23Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: 'Apple Music: "What do you want to hear?" Me: "Atmospheric instrumental
   black metal to write to." Apple Music: "Here''s three metal songs with vocals, a
   field recording, an ambient…'
-displayOrder: 30
+displayOrder: 47
 heroImage: ''
 importance: 56.2
 pubDate: '2026-03-26T20:51:31Z'

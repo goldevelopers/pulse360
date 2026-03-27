@@ -3,7 +3,7 @@ category: Economy
 country: United States
 countryCode: US
 description: United Airlines and its flight attendants union reached a new labor deal.
-displayOrder: 49
+displayOrder: 999
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-26T18:28:16Z'

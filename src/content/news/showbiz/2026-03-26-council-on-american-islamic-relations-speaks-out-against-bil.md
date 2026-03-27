@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: The organization says the award being given to Maher "highlights the
   glaring double standards surrounding bigotry and violence that exist in our society."
-displayOrder: 2
+displayOrder: 999
 heroImage: ''
 importance: 61.8
 pubDate: '2026-03-26T20:03:39Z'

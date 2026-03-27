@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: Israel says it has killed IRGC naval commander Alireza Tangsiri in a
   strike near Bandar Abbas by the Strait of Hormuz.
-displayOrder: 43
+displayOrder: 999
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-26T13:23:30Z'

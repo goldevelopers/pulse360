@@ -4,7 +4,7 @@ country: Canada
 countryCode: CA
 description: Michael Rousseau has faced calls to resign for not speaking French in
   his message after the LaGuardia crash, which killed two Air Canada pilots.
-displayOrder: 24
+displayOrder: 43
 heroImage: ''
 importance: 59.2
 pubDate: '2026-03-26T14:40:10Z'

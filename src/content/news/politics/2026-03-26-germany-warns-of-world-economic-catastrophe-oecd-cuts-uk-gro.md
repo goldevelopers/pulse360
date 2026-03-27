@@ -4,7 +4,7 @@ country: Germany
 countryCode: DE
 description: European powers and bodies warn of economic collapse as the war on Iran
   nears one-month mark.
-displayOrder: 49
+displayOrder: 999
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-26T11:16:58Z'

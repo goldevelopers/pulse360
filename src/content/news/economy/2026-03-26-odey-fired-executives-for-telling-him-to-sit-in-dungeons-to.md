@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Financier told court he objected to safeguarding measures, including
   sitting on a lower floor, firm imposed after misconduct claims
-displayOrder: 36
+displayOrder: 999
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-26T16:52:48Z'

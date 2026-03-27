@@ -5,7 +5,7 @@ countryCode: US
 description: LSU is working to finalize a deal to bring back Will Wade, the current
   coach at NC State, who was suspended for the 2019 NCAA tournament while at LSU and
   later fired amid an NCAA…
-displayOrder: 10
+displayOrder: 27
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-26T16:37:38Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Shares of Brown-Forman surged, after Bloomberg reported that Pernod Ricard
   was looking into a potential acquisition of the Jack Daniel’s whiskey parent.
-displayOrder: 30
+displayOrder: 45
 heroImage: ''
 importance: 40.5
 pubDate: '2026-03-26T19:42:00Z'

@@ -3,7 +3,7 @@ category: Economy
 country: United States
 countryCode: US
 description: U.S.-traded crude was at around $93 a barrel on Thursday.
-displayOrder: 8
+displayOrder: 28
 heroImage: ''
 importance: 66.5
 pubDate: '2026-03-26T15:43:00Z'

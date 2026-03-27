@@ -2,7 +2,7 @@
 category: Tech
 description: Subjects who interacted with AI tools were more likely to think they
   were right, less likely to resolve conflicts.
-displayOrder: 5
+displayOrder: 19
 heroImage: ''
 importance: 64.0
 pubDate: '2026-03-26T18:14:01Z'

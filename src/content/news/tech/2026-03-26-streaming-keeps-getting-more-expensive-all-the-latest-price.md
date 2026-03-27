@@ -3,7 +3,7 @@ category: Tech
 description: Death. Taxes. All your streaming services getting a little more expensive
   all the time. These are the new certainties in life, it seems. Netflix has raised
   the cost of its…
-displayOrder: 12
+displayOrder: 29
 heroImage: ''
 importance: 55.2
 pubDate: '2026-03-26T19:13:26Z'

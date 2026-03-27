@@ -3,7 +3,7 @@ category: Sports
 description: Transgender women athletes are now excluded from the Olympics after the
   IOC agreed to a new eligibility policy Thursday that aligns with U.S. President
   Donald Trump's executive…
-displayOrder: 20
+displayOrder: 34
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-26T16:37:39Z'

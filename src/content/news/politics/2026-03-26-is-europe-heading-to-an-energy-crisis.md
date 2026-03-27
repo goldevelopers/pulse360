@@ -2,7 +2,7 @@
 category: Politics
 description: Europe is bracing for a supply crunch and a price shock as the Iran conflict
   drags on.
-displayOrder: 40
+displayOrder: 999
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-26T12:59:11Z'

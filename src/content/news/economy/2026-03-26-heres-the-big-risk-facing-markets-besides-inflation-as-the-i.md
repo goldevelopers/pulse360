@@ -5,7 +5,7 @@ countryCode: US
 description: The chances of accelerating U.S. inflation are growing with each passing
   day as the war in the Middle East continues, with the average price of gasoline
   nationwide spiking to…
-displayOrder: 14
+displayOrder: 31
 heroImage: ''
 importance: 52.5
 pubDate: '2026-03-26T20:03:00Z'

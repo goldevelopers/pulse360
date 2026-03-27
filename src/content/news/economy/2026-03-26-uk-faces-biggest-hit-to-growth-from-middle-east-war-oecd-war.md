@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Outlook underscores economy’s exposure to conflict through reliance on
   energy imports
-displayOrder: 41
+displayOrder: 999
 heroImage: ''
 importance: 52.5
 pubDate: '2026-03-26T11:35:28Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Industry that benefited from president’s cuts to regulation and green
   policy is wary of unpredictability
-displayOrder: 21
+displayOrder: 38
 heroImage: ''
 importance: 59.5
 pubDate: '2026-03-26T15:34:47Z'

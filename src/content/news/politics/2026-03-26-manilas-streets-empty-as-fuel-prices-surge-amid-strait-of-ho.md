@@ -4,7 +4,7 @@ country: Philippines
 countryCode: PH
 description: Empty streets expose another crisis as Filipinos battle soaring oil prices,
   dwindling incomes, and a stagnating economy.
-displayOrder: 30
+displayOrder: 41
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-26T22:30:16Z'

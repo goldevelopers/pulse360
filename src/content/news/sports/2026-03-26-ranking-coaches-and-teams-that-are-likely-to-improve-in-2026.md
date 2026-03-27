@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Curt Cignetti reset how we view coaching turnarounds while Oklahoma State,
   with a new coach, has nowhere to go but up.
-displayOrder: 36
+displayOrder: 999
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-26T19:21:02Z'

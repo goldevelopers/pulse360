@@ -4,7 +4,7 @@ country: Japan
 countryCode: JP
 description: Former Formula 1 champion Max Verstappen kicked a reporter out of a press
   conference ahead of Sunday's Japanese Grand Prix.
-displayOrder: 24
+displayOrder: 37
 heroImage: ''
 importance: 54.0
 pubDate: '2026-03-26T20:31:00Z'

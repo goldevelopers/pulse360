@@ -4,7 +4,7 @@ country: Costa Rica
 countryCode: CR
 description: The Central American nation is latest to sign a &#039;third-country&#039;
   deportation agreement with the Trump administration.
-displayOrder: 16
+displayOrder: 27
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-26T23:09:57Z'

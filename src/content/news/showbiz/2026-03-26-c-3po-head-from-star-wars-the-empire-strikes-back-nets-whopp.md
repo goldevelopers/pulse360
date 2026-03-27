@@ -3,7 +3,7 @@ category: Showbiz
 description: Propstore’s spring entertainment memorabilia live auction, which has
   garnered $6.5 million thus far, features items from ‘Jaws,’ ‘Batman Begins,’ ‘The
   Lord of the Rings,’ ‘Top…
-displayOrder: 12
+displayOrder: 999
 heroImage: ''
 importance: 72.8
 pubDate: '2026-03-26T18:44:15Z'

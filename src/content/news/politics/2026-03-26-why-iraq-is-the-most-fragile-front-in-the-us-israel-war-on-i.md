@@ -3,7 +3,7 @@ category: Politics
 country: Iraq
 countryCode: IQ
 description: Iraq is under attack from all sides as militias and foreign powers clash.
-displayOrder: 9
+displayOrder: 19
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-26T22:23:40Z'

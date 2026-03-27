@@ -2,7 +2,7 @@
 category: Politics
 description: The disruption in oil supplies has caused shortages and concerns in several
   African countries.
-displayOrder: 23
+displayOrder: 40
 heroImage: ''
 importance: 61.2
 pubDate: '2026-03-26T17:57:41Z'

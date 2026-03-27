@@ -2,7 +2,7 @@
 category: Politics
 description: Transgender athletes banned from women&#039;s Olympic events by new IOC
   policy aiming for &#039;fairness, safety and integrity&#039;.
-displayOrder: 39
+displayOrder: 999
 heroImage: ''
 importance: 55.5
 pubDate: '2026-03-26T16:27:43Z'

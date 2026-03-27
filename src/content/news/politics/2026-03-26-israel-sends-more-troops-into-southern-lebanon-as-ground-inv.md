@@ -4,7 +4,7 @@ country: Lebanon
 countryCode: LB
 description: Lebanon&#039;s PM warns Israeli actions and statements threaten Lebanese
   sovereignty and violate international law.
-displayOrder: 10
+displayOrder: 22
 heroImage: ''
 importance: 69.5
 pubDate: '2026-03-26T20:10:30Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: England's Paul Waring shoots a seven-under 63 to lead after the first
   round of the Texas Children's Houston Open.
-displayOrder: 5
+displayOrder: 16
 heroImage: ''
 importance: 61.2
 pubDate: '2026-03-26T23:56:11Z'

@@ -4,7 +4,7 @@ country: Israel
 countryCode: IL
 description: Growing opposition within Israel is raising questions about the government’s
   military strategy in southern Lebanon.
-displayOrder: 22
+displayOrder: 999
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-27T17:31:37Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: The Nuki Smart Lock is the best retrofit smart lock currently available
   for people who want a minimalist, feature-packed upgrade to their preexisting deadlock.
   It’s currently…
-displayOrder: 29
+displayOrder: 34
 heroImage: ''
 importance: 58.2
 pubDate: '2026-03-27T16:30:00Z'

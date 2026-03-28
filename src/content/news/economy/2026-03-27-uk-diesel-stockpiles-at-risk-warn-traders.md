@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Commercial inventories could be used up by mid-May if the Strait of Hormuz
   remains closed
-displayOrder: 41
+displayOrder: 43
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-27T19:06:11Z'

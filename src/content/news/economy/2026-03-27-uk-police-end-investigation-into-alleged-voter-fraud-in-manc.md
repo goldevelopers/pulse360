@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Probe was launched after monitoring group said it witnessed ‘high levels
   of family voting’ at Gorton and Denton poll
-displayOrder: 30
+displayOrder: 36
 heroImage: ''
 importance: 60.5
 pubDate: '2026-03-27T15:26:00Z'

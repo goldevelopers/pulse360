@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: From Dillon Thieneman on Day 1 to Jaffer Murphy late on Day 3, Mike Tannenbaum
   picks the draft prospects he'd want to target across all seven rounds.
-displayOrder: 32
+displayOrder: 33
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-27T19:16:39Z'

@@ -5,7 +5,7 @@ countryCode: US
 description: 'AMC is not moving forward with another season of its second Anne Rice
   series, Talamasca: The Secret Order, Deadline has confirmed. The series focuses
   on a secretive society called…'
-displayOrder: 7
+displayOrder: 999
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-27T23:33:38Z'

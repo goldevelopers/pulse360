@@ -5,7 +5,7 @@ countryCode: US
 description: If you’re constantly switching between working at home and on the go,
   Anker’s latest 160W Prime Charger can lighten your load by replacing multiple chargers
   with a single device.…
-displayOrder: 23
+displayOrder: 30
 heroImage: ''
 importance: 54.2
 pubDate: '2026-03-27T18:30:00Z'

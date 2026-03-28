@@ -4,7 +4,7 @@ country: Lebanon
 countryCode: LB
 description: Smoke rose over the skyline of Beirut following airstrikes as Israel
   continued to escalate its war on Hezbollah.
-displayOrder: 19
+displayOrder: 25
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-27T19:38:01Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Landmark verdicts shatter the Section 230 shield, turning ‘addictive’
   product design into a legal thicket for Meta, Alphabet and others.
-displayOrder: 46
+displayOrder: 44
 heroImage: ''
 importance: 37.5
 pubDate: '2026-03-27T21:29:00Z'

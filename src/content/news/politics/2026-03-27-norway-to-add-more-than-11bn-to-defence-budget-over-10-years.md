@@ -4,7 +4,7 @@ country: Norway
 countryCode: 'NO'
 description: Norway, as well as other NATO countries, has been under pressure from
   the US to boost defence spending.
-displayOrder: 33
+displayOrder: 999
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-27T14:31:18Z'

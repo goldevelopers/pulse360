@@ -5,7 +5,7 @@ countryCode: US
 description: Oil prices strengthened Friday, leading U.S. benchmark crude to turn
   higher for the week, as President Trump’s latest pause on striking Iran’s energy
   infrastructure did little to…
-displayOrder: 27
+displayOrder: 32
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-27T18:17:00Z'

@@ -4,7 +4,7 @@ country: United States
 countryCode: US
 description: Tiger Woods showed signs of impairment and was arrested at the scene
   of car crash in which he struck another vehicle.
-displayOrder: 13
+displayOrder: 17
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-27T22:17:04Z'

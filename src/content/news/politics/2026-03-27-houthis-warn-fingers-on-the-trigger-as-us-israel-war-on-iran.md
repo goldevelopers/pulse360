@@ -4,7 +4,7 @@ country: Yemen
 countryCode: YE
 description: The Iran-aligned Yemeni group have the ability to target key shipping
   lanes around the Arabian Peninsula.
-displayOrder: 3
+displayOrder: 9
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-27T22:53:23Z'

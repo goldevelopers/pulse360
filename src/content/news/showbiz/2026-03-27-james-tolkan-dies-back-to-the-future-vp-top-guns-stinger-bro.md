@@ -5,7 +5,7 @@ countryCode: US
 description: James Tolkan, who played the slacker-hating Mr. Strickland in the Back
   to the Future films and a air group commanding officer &#8220;Stinger&#8221; Jardian
   in Top Gun during a…
-displayOrder: 5
+displayOrder: 11
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-27T23:55:26Z'

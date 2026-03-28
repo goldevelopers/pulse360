@@ -4,7 +4,7 @@ country: Iran
 countryCode: IR
 description: One month since the US and Israel launched strikes on Iran, Tehran residents
   tell the BBC their lives have been devastated.
-displayOrder: 14
+displayOrder: 18
 heroImage: ''
 importance: 59.2
 pubDate: '2026-03-27T21:30:12Z'

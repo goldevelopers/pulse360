@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Based on a simple combination of ability and tactical importance, we've
   reranked the best players in order at the Big Six Premier League clubs.
-displayOrder: 35
+displayOrder: 45
 heroImage: ''
 importance: 49.5
 pubDate: '2026-03-27T15:50:02Z'

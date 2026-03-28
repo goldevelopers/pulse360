@@ -4,7 +4,7 @@ country: Israel
 countryCode: IL
 description: After years of regional forever wars, Israel&#039;s chief of staff warns
   the army is on the brink of collapse.
-displayOrder: 27
+displayOrder: 39
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-27T14:22:59Z'

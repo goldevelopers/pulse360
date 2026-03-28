@@ -5,7 +5,7 @@ countryCode: PL
 description: HBO Max has come off the back of a strong week with a double win at the
   Series Mania Awards for Polish series Proud. Proud, about a gay man who takes care
   of his infant niece…
-displayOrder: 7
+displayOrder: 999
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-27T20:00:00Z'

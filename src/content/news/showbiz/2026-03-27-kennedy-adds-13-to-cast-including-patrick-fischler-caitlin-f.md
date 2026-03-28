@@ -5,7 +5,7 @@ countryCode: US
 description: Netflix is rounding out casting for Kennedy, its upcoming drama series
   that explores the lives, loves, rivalries and tragedies of the Kennedy family.&#160;Patrick
   Fischler,…
-displayOrder: 16
+displayOrder: 999
 heroImage: ''
 importance: 57.0
 pubDate: '2026-03-27T17:00:00Z'

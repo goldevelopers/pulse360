@@ -5,7 +5,7 @@ countryCode: GB
 description: Andrew Garfield has revealed that he recently watched the Harry Potter
   movies for the first time, but said he did so knowing that it was &#8220;controversial.&#8221;
   The…
-displayOrder: 12
+displayOrder: 999
 heroImage: ''
 importance: 67.0
 pubDate: '2026-03-27T14:15:37Z'

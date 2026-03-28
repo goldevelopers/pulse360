@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: Under-fire Welsh Rugby Union chair announces he will not stand for a
   second term when his three-year tenure ends in July.
-displayOrder: 38
+displayOrder: 48
 heroImage: ''
 importance: 52.2
 pubDate: '2026-03-27T14:18:51Z'

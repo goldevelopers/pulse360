@@ -4,7 +4,7 @@ country: Nepal
 countryCode: NP
 description: At 35, Balen Shah becomes Nepal&#039;s first Madhesi prime minister,
   representing the southern plains bordering India.
-displayOrder: 34
+displayOrder: 999
 heroImage: ''
 importance: 63.5
 pubDate: '2026-03-27T10:59:03Z'

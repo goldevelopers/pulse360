@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: ‘Omnibus’ claim comes days before regulator unveils details of mis-selling
   redress scheme
-displayOrder: 46
+displayOrder: 999
 heroImage: ''
 importance: 43.5
 pubDate: '2026-03-27T15:00:01Z'

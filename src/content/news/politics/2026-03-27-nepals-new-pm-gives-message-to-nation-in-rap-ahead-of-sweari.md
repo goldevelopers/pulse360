@@ -4,7 +4,7 @@ country: Nepal
 countryCode: NP
 description: Nepali rapper-turned-politician Balendra Shah has been sworn in as PM
   after his party’s landslide election win.
-displayOrder: 41
+displayOrder: 999
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-27T13:10:37Z'

@@ -4,7 +4,7 @@ country: United Kingdom
 countryCode: GB
 description: The debate over North Sea oil and gas resembles a bar brawl between opponents
   who can’t see straight
-displayOrder: 42
+displayOrder: 999
 heroImage: ''
 importance: 47.5
 pubDate: '2026-03-27T15:08:23Z'

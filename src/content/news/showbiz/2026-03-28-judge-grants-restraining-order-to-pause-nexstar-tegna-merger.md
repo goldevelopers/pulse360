@@ -5,7 +5,7 @@ countryCode: US
 description: A federal judge on Friday evening granted a temporary restraining order
   to halt Nexstar&#8217;s merger with Tegna, a transaction that creates a broadcasting
   giant with almost 260…
-displayOrder: 999
+displayOrder: 36
 heroImage: ''
 importance: 47.0
 pubDate: '2026-03-28T04:04:36Z'

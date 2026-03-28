@@ -2,7 +2,7 @@
 category: Economy
 description: Long regarded as dishonourable or counterproductive, the idea of targeting
   enemy leaders is becoming normalised. What do we lose along with the taboo?
-displayOrder: 28
+displayOrder: 41
 heroImage: ''
 importance: 39.5
 pubDate: '2026-03-28T05:00:33Z'

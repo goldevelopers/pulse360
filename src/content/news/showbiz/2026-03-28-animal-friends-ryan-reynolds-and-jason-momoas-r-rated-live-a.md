@@ -5,7 +5,7 @@ countryCode: US
 description: 'EXCLUSIVE: Warner Bros is shifting Legendary&#8217;s live-action animated
   hybrid, Animal Friends, to Jan. 22, 2027. We understand that the reason for this
   latest release date…'
-displayOrder: 17
+displayOrder: 37
 heroImage: ''
 importance: 60.0
 pubDate: '2026-03-28T00:01:00Z'

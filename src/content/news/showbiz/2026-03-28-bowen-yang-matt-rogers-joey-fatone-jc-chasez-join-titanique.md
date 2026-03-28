@@ -5,7 +5,7 @@ countryCode: US
 description: A new group of passengers have boarded the producing team of Titanique
   as the musical parody makes its limited Broadway run. Tony-winning producer Eva
   Price announced this week…
-displayOrder: 999
+displayOrder: 34
 heroImage: ''
 importance: 49.0
 pubDate: '2026-03-28T03:37:52Z'

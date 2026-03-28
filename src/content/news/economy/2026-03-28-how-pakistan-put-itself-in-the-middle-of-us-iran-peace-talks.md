@@ -4,7 +4,7 @@ country: Pakistan
 countryCode: PK
 description: Islamabad seeks to capitalise on warming ties with both Trump and Tehran
   but has much to lose if efforts fail
-displayOrder: 10
+displayOrder: 25
 heroImage: ''
 importance: 53.5
 pubDate: '2026-03-28T05:05:12Z'

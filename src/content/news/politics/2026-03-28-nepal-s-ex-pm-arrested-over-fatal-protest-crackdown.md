@@ -4,7 +4,7 @@ country: Nepal
 countryCode: NP
 description: More than 70 people were killed during an uprising last year which ousted
   Oli's government.
-displayOrder: 11
+displayOrder: 24
 heroImage: ''
 importance: 49.2
 pubDate: '2026-03-28T06:58:37Z'

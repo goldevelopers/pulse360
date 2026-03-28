@@ -5,7 +5,7 @@ countryCode: US
 description: Champaign officials announced an emergency order limiting alcohol sales
   on the Illinois campus on Saturday night in anticipation of potential property damage
   and excessive…
-displayOrder: 7
+displayOrder: 21
 heroImage: ''
 importance: 57.5
 pubDate: '2026-03-28T04:35:28Z'

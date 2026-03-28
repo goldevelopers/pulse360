@@ -3,7 +3,7 @@ category: Tech
 description: We don't review many solar panels at The Verge, but the tech inside Bluetti's
   incredibly portable Sora 500 panel makes it worth a deeper look. The new N-Type
   panels made by…
-displayOrder: 1
+displayOrder: 7
 heroImage: ''
 importance: 62.2
 pubDate: '2026-03-28T07:00:00Z'
